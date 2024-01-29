@@ -3,4 +3,7 @@ public class Test {
         int number = 99;
         System.out.println(number);
     }
+    private Test(){
+        //checkstyle
+    }
 }
