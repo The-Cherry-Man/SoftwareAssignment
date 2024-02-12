@@ -1,6 +1,11 @@
 import java.util.List;
 
 public class InMemoryDataStore {
+
+    public InMemoryDataStore(){
+
+    }
+    
     public List<Integer> getInput(){
         InMemoryUserNumber imun = new InMemoryUserNumber();
         List<Integer> l = imun.getList();
