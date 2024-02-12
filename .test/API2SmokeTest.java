@@ -5,6 +5,11 @@ import org.junit.jupiter.api.Assertions;
 import java.util.List;
 
 public class API2SmokeTest {
+
+    public API2SmokeTest(){
+        
+    }
+    
     @Test
     public void readTest(){
         UserNumber k = 5;
