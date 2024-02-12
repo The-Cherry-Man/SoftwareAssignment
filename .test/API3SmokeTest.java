@@ -2,6 +2,9 @@ import junit.framework.Assert;
 import org.junit.Test;
 
 public class API3SmokeTest {
+    public API3SmokeTest(){
+        
+    }
 
     @Test
     public void testInput(){
