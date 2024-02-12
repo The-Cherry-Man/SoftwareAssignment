@@ -13,7 +13,7 @@ public class ComputeEngineIntegrationTest {
         Destination x = imds.getOutput();  //Should it be List<String>?
         ConfigKey c = 1000;
 
-        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI;
+        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI();
         unba.UserNumberInput(n);
         unba.DelimeterOutput(d);
         unba.DestinationOutput(x);
