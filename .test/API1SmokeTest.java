@@ -9,13 +9,13 @@ public class API1SmokeTest {
 
     
     @Test
-    public void UserinputTest(){
+    public void UserInputTest(){
 
         UserNumber k = 13;
 
-        UserNetworkBoundaryAPI UNBA = new  UserNetworkBoundaryAPI();
+        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
-        ConfigKey useredNumberInput = UNBA.UserNumberInput(k);
+        ConfigKey useredNumberInput = unba.UserNumberInput(k);
 
         Assert.assertNotNull(useredNumberInput);
     }
@@ -25,7 +25,7 @@ public class API1SmokeTest {
 
         Delimeter d = '/';
 
-        UserNetworkBoundaryAPI UNBA = new  UserNetworkBoundaryAPI();
+        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
         ConfigKey configKey = UNBA.DelimeterOuput(d);
 
@@ -37,9 +37,9 @@ public class API1SmokeTest {
 
         Destination s = "destination";
 
-        UserNetworkBoundaryAPI UNBA = new  UserNetworkBoundaryAPI();
+        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
-        ConfigKey destinationOutput = UNBA.DestinationOutput(s);
+        ConfigKey destinationOutput = unba.DestinationOutput(s);
 
         Assert.assertNotNull(destinationOutput);
     }
@@ -49,11 +49,11 @@ public class API1SmokeTest {
 
         List<Integer> list = new Arraylist<>();
 
-        ConfigKeyCollection C = list;
+        ConfigKeyCollection c = list;
 
-        UserNetworkBoundaryAPI UNBA = new  UserNetworkBoundaryAPI();
+        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
-        Result compute1 = UNBA.Compute(C);
+        Result compute1 = UNBA.Compute(c);
 
         Assert.assertNotNull(compute1);
     }
