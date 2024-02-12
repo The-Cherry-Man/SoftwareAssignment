@@ -1,7 +1,12 @@
-import java.util.*;
+import java.util.List;
 
 
 public class InMemoryUserNumber {
+
+    public InMemoryUserNumber(){
+        
+    }
+    
     List<Integer> input = new ArrayList<>();
 
     public List<Integer> getInput() {
