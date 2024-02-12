@@ -9,7 +9,7 @@ public class API1SmokeTest {
 
     
     @Test
-    public void UserInputTest(){
+    public void userInputTest(){
 
         UserNumber k = 13;
 
@@ -21,7 +21,7 @@ public class API1SmokeTest {
     }
 
     @Test
-    public void DelimterTest(){
+    public void delimterTest(){
 
         Delimeter d = '/';
 
@@ -33,7 +33,7 @@ public class API1SmokeTest {
     }
 
     @Test
-    public void DestinationTest(){
+    public void destinationTest(){
 
         Destination s = "destination";
 
@@ -45,7 +45,7 @@ public class API1SmokeTest {
     }
 
     @Test
-    public void Computetest(){
+    public void computeTest(){
 
         List<Integer> list = new Arraylist<>();
 
