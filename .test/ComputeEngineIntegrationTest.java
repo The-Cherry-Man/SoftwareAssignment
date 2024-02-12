@@ -4,8 +4,13 @@ import org.junit.Test;
 import javax.print.attribute.standard.Destination;
 
 public class ComputeEngineIntegrationTest {
+
+    public ComputeEngineIntegrationTest(){
+        
+    }
+    
     @Test
-    public void IntegrationTest() {
+    public void integrationTest() {
 
         InMemoryDataStore imds = new InMemoryDataStore();
         UserNumber n = imds.getInput();
