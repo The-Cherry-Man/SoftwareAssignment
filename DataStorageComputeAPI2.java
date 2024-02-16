@@ -1,4 +1,4 @@
-public interface API2 {
+public interface DataStorageComputeAPI2 {
 
     //Takes in user's input
    List read(UserNumber n);
