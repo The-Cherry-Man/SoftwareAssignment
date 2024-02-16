@@ -1,4 +1,4 @@
-public interface API3 {
+public interface ComputeEngineAPI3 {
 
 
   Integer input(Integer i);
