@@ -1,8 +1,8 @@
-public class UserNetworkBoundaryAPI implements API1{
+public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
-        private API2 api2;
+        private DataStorageComputeAPI2 api2;
 
-        private API3 api3;
+        private ComputeEngineAPI3 api3;
 
         public UserNetworkBoundaryAPI() {
 
