@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class DataProcessBoundaryAPI implements API2 {
+public class DataProcessBoundaryAPI implements DataStorageComputeAPI2 {
     public DataProcessBoundaryAPI(){
 
     }

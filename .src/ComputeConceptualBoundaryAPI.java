@@ -1,4 +1,4 @@
-public class ComputeConceptualBoundaryAPI implements API3 {
+public class ComputeConceptualBoundaryAPI implements ComputeEngineAPI3 {
 
     public ComputeConceptualBoundaryAPI() {
 

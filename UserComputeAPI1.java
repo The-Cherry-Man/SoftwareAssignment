@@ -1,4 +1,4 @@
-public interface API1 {
+public interface UserComputeAPI1 {
 
     //Takes in user number Data
     ConfigKey userNumberInput(UserNumber n);
