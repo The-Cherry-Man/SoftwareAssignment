@@ -22,8 +22,8 @@ public interface ComputeEngineAPI3 {
       BigInteger product = BigInteger.ONE;
       for (int i = 0; i < factorial.toString().length(); i++) {
           int digit = factorial.toString().charAt(i) - '0';
-          if(digit == 0){
-
+          if(digit == 0) {
+            continue;
           }
           else{
               product = product.multiply(BigInteger.valueOf(digit));
