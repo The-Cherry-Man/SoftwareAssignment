@@ -24,9 +24,8 @@ public interface ComputeEngineAPI3 {
           int digit = factorial.toString().charAt(i) - '0';
           if(digit == 0){
             continue;
-          }
-          else{
-              product = product.multiply(BigInteger.valueOf(digit));
+          }else{
+            product = product.multiply(BigInteger.valueOf(digit));
           }
       }
       return product;
