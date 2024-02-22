@@ -3,7 +3,7 @@ import java.util.List;
 
 public class ConfigKeyCollection {
 
-    List<ConfigKey> ListOfKeys = new ArrayList<>();
+    List<ConfigKey> listOfKeys = new ArrayList<>();
 
     public ConfigKeyCollection(){
 
@@ -16,12 +16,12 @@ public class ConfigKeyCollection {
 
     public List<ConfigKey> getListOfKeys(){
 
-        return ListOfKeys;
+        return listOfKeys;
 
     }
     public void addKey(ConfigKey c){
 
-        ListOfKeys.add(c);
+        listOfKeys.add(c);
 
     }
 
