@@ -9,18 +9,18 @@ public class Destination {
 
     public Destination(String s){
 
-        this.UserDestination = s;
+        this.userDestination = s;
     }
     
     public String getDestination(){
 
-        return this.UserDestination;
+        return this.userDestination;
 
     }
     public void setDestination(String s){
 
 
-        this.UserDestination = s;
+        this.userDestination = s;
     }
 
 }
