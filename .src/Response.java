@@ -5,7 +5,7 @@ public class Response {
     public Response(){
 
     }
-    public Response (boolean b){
+    public Response(boolean b){
 
         this.result =b;
     }
