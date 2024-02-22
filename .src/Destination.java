@@ -11,6 +11,7 @@ public class Destination {
 
         this.UserDestination = s;
     }
+    
     public String getDestination(){
 
         return this.UserDestination;
