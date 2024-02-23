@@ -4,9 +4,6 @@ public class ComputeConceptualBoundaryAPI implements ComputeEngineAPI3 {
     public ComputeConceptualBoundaryAPI() {
 
     }
-    @Override
-public interface ComputeEngineAPI3 {
-
 
   public BigInteger computation(Integer i){
     BigInteger firstResult = factorialResult(i);
@@ -38,4 +35,4 @@ public interface ComputeEngineAPI3 {
   }
 
 }
-}
+
