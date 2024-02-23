@@ -1,17 +1,15 @@
-public interface UserComputeAPI1 {
+public interface UserComputeAPI1<T> {
 
     //Takes in user number Data
-    ConfigKey userNumberInput(UserNumber n);
-
+    ConfigKey UserNumberInput(T N);
 
     //Chooses the users Delimeter.
-    ConfigKey delimeterOuput(Delimeter d);
-
+    ConfigKey DelimeterOuput(Delimeter D);
 
     //Sets the destination of the data results
-    ConfigKey destinationOutput(Destination d);
+    ConfigKey DestinationOutput(Destination D);
 
-   Result compute(ConfigKeyCollection c);
+   Result Compute(ConfigKeyCollection C);
 
    //Delimeter Choices
     char D1 = ';';
