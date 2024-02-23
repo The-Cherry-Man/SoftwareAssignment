@@ -13,7 +13,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         Map<ConfigKey,Destination> destinationMap =  new HashMap<>();
 
-        Map<ConfigKey,Object> UsernumberMap =  new HashMap<>();
+        Map<ConfigKey,Object> usernumberMap =  new HashMap<>();
 
         ConfigKeyCollection collection = new ConfigKeyCollection();
 
@@ -28,7 +28,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         collection.addKey(key);
 
-        UsernumberMap.put(key,usernumber);
+        usernumberMap.put(key,usernumber);
 
         return key;
 
@@ -61,11 +61,11 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
     @Override
     public Result Compute(ConfigKeyCollection C) {// read --> computation --> write
 
-         List<ConfigKey> Keys =  C.getListOfKeys();
+         List<ConfigKey> keys =  C.getListOfKeys();
 
-            for(int i = 0; i <Keys.size(); ++i){
+            for(int i = 0; i <keys.size(); ++i){
 
-            Keys.contains(i);
+            keys.contains(i);
 
         }
 
