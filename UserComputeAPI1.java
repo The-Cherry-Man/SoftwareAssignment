@@ -1,12 +1,10 @@
-public interface UserComputeAPI1 {
+public interface UserComputeAPI1<T> {
 
     //Takes in user number Data
-    ConfigKey userNumberInput(UserNumber n);
-
+    ConfigKey userNumberInput(T n);
 
     //Chooses the users Delimeter.
     ConfigKey delimeterOuput(Delimeter d);
-
 
     //Sets the destination of the data results
     ConfigKey destinationOutput(Destination d);
@@ -14,8 +12,8 @@ public interface UserComputeAPI1 {
    Result compute(ConfigKeyCollection c);
 
    //Delimeter Choices
-    char D1 = ';';
-    char D2 = '|';
-    char D3 = '/';
+    char d1 = ';';
+    char d2 = '|';
+    char d3 = '/';
 
 }
