@@ -1,9 +1,9 @@
 import junit.framework.Assert;
 import org.junit.Test;
 
-public class API1_Smoke_Test {
+public class API1SmokeTest {
 
-    public API1_Smoke_Test(){
+    public API1SmokeTest(){
 
 
     }
