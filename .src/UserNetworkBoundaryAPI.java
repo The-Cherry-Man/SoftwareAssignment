@@ -35,7 +35,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
     }
 
     @Override
-    public ConfigKey DelimeterOuput(Delimeter Del) {
+    public ConfigKey DelimeterOuput(Delimeter del) {
 
         ConfigKey key = new ConfigKey();
 
@@ -47,7 +47,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
     }
 
     @Override
-    public ConfigKey DestinationOutput(Destination Des) {
+    public ConfigKey DestinationOutput(Destination des) {
 
         ConfigKey key = new ConfigKey();
 
@@ -59,7 +59,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
     }
 
     @Override
-    public Result Compute(ConfigKeyCollection C) {// read --> computation --> write
+    public Result Compute(ConfigKeyCollection c) {// read --> computation --> write
 
          List<ConfigKey> keys =  C.getListOfKeys();
 
