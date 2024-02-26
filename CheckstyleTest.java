@@ -3,7 +3,7 @@ public class CheckstyleTest {
         int number = 99;
         System.out.println(number);
     }
-    private Test(){
+    private void Test(){
         //checkstyle
     }
 }

@@ -1,5 +1,6 @@
-import junit.framework.Assert;
-import org.junit.Test;
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import java.io.IOException;
 
 public class API1SmokeTest {
 
@@ -15,9 +16,9 @@ public class API1SmokeTest {
 
         UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
-        ConfigKey userdNumberInput = unba.UserNumberInput(n);
+        ConfigKey userNumberInput = unba.userNumberInput(n);
 
-        Assert.assertNotNull(userdNumberInput);
+        Assert.assertNotNull(userNumberInput);
     }
 
     @Test
@@ -27,7 +28,7 @@ public class API1SmokeTest {
 
         UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
-        ConfigKey configKey = unba.DelimeterOuput(d);
+        ConfigKey configKey = unba.delimeterOuput(d);
 
         Assert.assertNotNull(configKey);
     }
@@ -41,19 +42,19 @@ public class API1SmokeTest {
 
         UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
-        ConfigKey destinationOutput = unba.DestinationOutput(s);
+        ConfigKey destinationOutput = unba.destinationOutput(s);
 
         Assert.assertNotNull(destinationOutput);
     }
 
     @Test
-    public void computeTest(){
+    public void computeTest() throws IOException {
 
         ConfigKeyCollection c = new ConfigKeyCollection();
 
         UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
-        Result compute1 = unba.Compute(c);
+        Result compute1 = unba.compute(c);
 
         Assert.assertNotNull(compute1);
     }

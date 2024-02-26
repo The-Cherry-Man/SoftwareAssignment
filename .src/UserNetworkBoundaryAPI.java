@@ -1,3 +1,5 @@
+import java.io.IOException;
+import java.math.BigInteger;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +11,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         private ComputeConceptualBoundaryAPI api3;
 
-        Map<ConfigKey,Delimeter> delmeterMap =  new HashMap<>();
+        Map<ConfigKey,Delimeter> delimeterMap =  new HashMap<>();
 
         Map<ConfigKey,Destination> destinationMap =  new HashMap<>();
 
@@ -41,7 +43,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         collection.addKey(key);
 
-        delmeterMap.put(key,Del);
+        delimeterMap.put(key,del);
 
         return key;
     }
@@ -53,13 +55,13 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         collection.addKey(key);
 
-        destinationMap.put(key,Des);
+        destinationMap.put(key,des);
 
         return key;
     }
 
     @Override
-    public Result compute(ConfigKeyCollection c) throws IOException {// read --> computation --> write
+    public Result compute(ConfigKeyCollection c) {// read --> computation --> write
 
         List<ConfigKey> keys = c.getListOfKeys();
 
@@ -78,9 +80,9 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
                 destination = destinationMap.get(key);
 
             }
-            if (delmeterMap.containsKey(key)) {
+            if (delimeterMap.containsKey(key)) {
 
-                delimeter = delmeterMap.get(key);
+                delimeter = delimeterMap.get(key);
 
             }
             if (usernumberMap.containsKey(key)) {
