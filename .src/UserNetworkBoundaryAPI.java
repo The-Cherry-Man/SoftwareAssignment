@@ -59,18 +59,49 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
     }
 
     @Override
-    public Result compute(ConfigKeyCollection c) {// read --> computation --> write
+    public Result compute(ConfigKeyCollection c) throws IOException {// read --> computation --> write
 
-         List<ConfigKey> keys =  C.getListOfKeys();
+        List<ConfigKey> keys = c.getListOfKeys();
 
-            for(int i = 0; i <keys.size(); ++i){
+        Result r = new Result();
 
-            keys.contains(i);
+        Destination destination = null;
+
+        Delimeter delimeter = null;
+
+        UserNumber o = null;
+
+        for (ConfigKey key : keys) {
+
+            if (destinationMap.containsKey(key)) {
+
+                destination = destinationMap.get(key);
+
+            }
+            if (delmeterMap.containsKey(key)) {
+
+                delimeter = delmeterMap.get(key);
+
+            }
+            if (usernumberMap.containsKey(key)) {
+
+                o = usernumberMap.get(key);
+
+            }
 
         }
 
-        //api2.read();
-       //api3.computation();
-        //tried to do but could not figure out.
+        BigInteger computationAnswer;
+
+        List<Integer> read = api2.read(o);
+
+        for(int i = 0; i < read.size(); ++i){
+
+            computationAnswer = api3.computation(read.get(i));
+
+            api2.write(computationAnswer,delimeter,destination);
+        }
+        
+        return r;
     }
 }
