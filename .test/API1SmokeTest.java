@@ -11,11 +11,11 @@ public class API1SmokeTest {
     @Test
     public void userinputTest(){
 
-        Usernumber n = new Usernumber();
+        FileUserNumber n = new FileUserNumber();
 
         UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
-        ConfigKey userdNumberInput = unba.UserNumberInput(Usernumber);
+        ConfigKey userdNumberInput = unba.UserNumberInput(n);
 
         Assert.assertNotNull(userdNumberInput);
     }
@@ -49,7 +49,7 @@ public class API1SmokeTest {
     @Test
     public void computeTest(){
 
-        Collections.
+        ConfigKeyCollection c = new ConfigKeyCollection();
 
         UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
