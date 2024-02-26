@@ -1,7 +1,7 @@
-public interface UserComputeAPI1<T> {
+public interface UserComputeAPI1 {
 
     //Takes in user number Data
-    ConfigKey userNumberInput(T n);
+    ConfigKey userNumberInput(UserNumber n);
 
     //Chooses the users Delimeter.
     ConfigKey delimeterOuput(Delimeter d);
