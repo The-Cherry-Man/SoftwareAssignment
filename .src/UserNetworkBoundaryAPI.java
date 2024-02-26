@@ -59,9 +59,9 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
     }
 
     @Override
-    public Result compute(ConfigKeyCollection C) throws IOException {// read --> computation --> write
+    public Result compute(ConfigKeyCollection c) throws IOException {// read --> computation --> write
 
-        List<ConfigKey> keys = C.getListOfKeys();
+        List<ConfigKey> keys = c.getListOfKeys();
 
         Result r = new Result();
 
