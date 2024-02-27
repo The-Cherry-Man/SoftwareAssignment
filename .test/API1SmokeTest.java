@@ -10,7 +10,7 @@ public class API1SmokeTest {
     }
 
     @Test
-    public void userinputTest(){
+    public void userInputTest(){
 
         FileUserNumber n = new FileUserNumber();
 
@@ -22,7 +22,7 @@ public class API1SmokeTest {
     }
 
     @Test
-    public void delimterTest(){
+    public void delimiterTest(){
 
         Delimeter d = new Delimeter('/');
 
