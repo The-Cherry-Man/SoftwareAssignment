@@ -57,7 +57,15 @@ public class API1SmokeTest {
 
         ConfigKey useredNumberInput = unba.userNumberInput(new UserNumberInt(4));
 
+        ConfigKey useredDel = unba.delimeterOuput(new Delimeter('/'));
+
+        ConfigKey usereddestination = unba.destinationOutput(new Destination("Test Destination"));
+
         c.addKey(useredNumberInput);
+
+        c.addKey(useredDel);
+
+        c.addKey(usereddestination);
 
         Result compute = unba.compute(c);
 
