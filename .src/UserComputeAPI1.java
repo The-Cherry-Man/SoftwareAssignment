@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public interface UserComputeAPI1 {
 
     //Takes in user number Data
@@ -9,7 +12,7 @@ public interface UserComputeAPI1 {
     //Sets the destination of the data results
     ConfigKey destinationOutput(Destination d);
 
-   Result compute(ConfigKeyCollection c);
+   Result compute(ConfigKeyCollection c) throws IOException;
 
    //Delimeter Choices
     char d1 = ';';

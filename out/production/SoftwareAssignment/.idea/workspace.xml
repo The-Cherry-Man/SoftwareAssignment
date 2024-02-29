@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fa0026e-adb1-4178-8ce4-9d111b492033" name="Changes" comment="" />
+    <list default="true" id="3fa0026e-adb1-4178-8ce4-9d111b492033" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.src/ConfigKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/.src/ConfigKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.src/InMemoryUserNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/.src/InMemoryUserNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.src/UserComputeAPI1.java" beforeDir="false" afterPath="$PROJECT_DIR$/.src/UserComputeAPI1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.src/UserNetworkBoundaryAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/.src/UserNetworkBoundaryAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.test/API1SmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/.test/API1SmokeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.test/API2SmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/.test/API2SmokeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.test/ComputeEngineIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/.test/ComputeEngineIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.test/InMemoryDataStore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.test/InMemoryDestination.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.test/InMemoryUserNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CheckstyleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CheckstyleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoftwareAssignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareAssignment.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +46,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -42,28 +58,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.API1SmokeTest.computeTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.API1SmokeTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.API1SmokeTest.userinputTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.API2SmokeTest.readTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.API3SmokeTest.testInput.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ComputeEngineIntegrationTest.integrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/htlon/Desktop/Software Engineering/Assignment 5/In class 5&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.API1SmokeTest.computeTest.executor": "Run",
+    "JUnit.API1SmokeTest.executor": "Run",
+    "JUnit.API1SmokeTest.userInputTest.executor": "Run",
+    "JUnit.API1SmokeTest.userinputTest.executor": "Run",
+    "JUnit.API2SmokeTest.readTest.executor": "Run",
+    "JUnit.API3SmokeTest.testInput.executor": "Run",
+    "JUnit.ComputeEngineIntegrationTest.integrationTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/htlon/Desktop/Software Engineering/Assignment 5/In class 5",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.API1SmokeTest.userinputTest">
+}]]></component>
+  <component name="RunManager" selected="JUnit.API1SmokeTest.userInputTest">
     <configuration name="API1SmokeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareAssignment" />
       <option name="PACKAGE_NAME" value="" />
@@ -73,11 +90,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="API1SmokeTest.computeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="API1SmokeTest.userInputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareAssignment" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="API1SmokeTest" />
-      <option name="METHOD_NAME" value="computeTest" />
+      <option name="METHOD_NAME" value="userInputTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -93,6 +110,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="API2SmokeTest.readTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftwareAssignment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="API2SmokeTest" />
+      <option name="METHOD_NAME" value="readTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="API3SmokeTest.testInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareAssignment" />
       <option name="PACKAGE_NAME" value="" />
@@ -103,23 +130,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComputeEngineIntegrationTest.integrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftwareAssignment" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ComputeEngineIntegrationTest" />
-      <option name="METHOD_NAME" value="integrationTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.API1SmokeTest.userInputTest" />
+        <item itemvalue="JUnit.API2SmokeTest.readTest" />
+        <item itemvalue="JUnit.API3SmokeTest.testInput" />
         <item itemvalue="JUnit.API1SmokeTest.userinputTest" />
         <item itemvalue="JUnit.API1SmokeTest" />
-        <item itemvalue="JUnit.API3SmokeTest.testInput" />
-        <item itemvalue="JUnit.API1SmokeTest.computeTest" />
-        <item itemvalue="JUnit.ComputeEngineIntegrationTest.integrationTest" />
       </list>
     </recent_temporary>
   </component>

@@ -2,10 +2,16 @@ import java.util.List;
 
 public class InMemoryUserNumber implements UserNumber{
 
+    int chosenNumber;
+
     private List<Integer> inputData;
 
     public InMemoryUserNumber(){
 
+
+    }
+    public InMemoryUserNumber(int i){
+        this.chosenNumber = i;
 
     }
 
@@ -13,5 +19,9 @@ public class InMemoryUserNumber implements UserNumber{
 
         return inputData;
 
+    }
+
+    public void setInMemoryUserNumber(int i) {
+        this.chosenNumber = i;
     }
 }

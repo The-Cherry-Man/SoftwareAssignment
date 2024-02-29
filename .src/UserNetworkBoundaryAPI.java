@@ -1,4 +1,6 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +16,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         Map<ConfigKey,Destination> destinationMap =  new HashMap<>();
 
-        Map<ConfigKey,Object> usernumberMap =  new HashMap<>();
+        Map<ConfigKey,UserNumber> usernumberMap =  new HashMap<>();
 
         ConfigKeyCollection collection = new ConfigKeyCollection();
 
@@ -42,7 +44,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         collection.addKey(key);
 
-        delmeterMap.put(key,Del);
+        delmeterMap.put(key,del);
 
         return key;
     }
@@ -54,7 +56,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         collection.addKey(key);
 
-        destinationMap.put(key,Des);
+        destinationMap.put(key,des);
 
         return key;
     }
