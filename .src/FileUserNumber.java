@@ -7,9 +7,19 @@ public class FileUserNumber implements UserNumber{
 
     }
 
+    public FileUserNumber(String s){
+
+        this.filename = s;
+    }
+
     public String getFileName(){
 
         return filename;
 
+    }
+
+    public void setFileName(String s){
+
+        this.filename = s;
     }
 }
