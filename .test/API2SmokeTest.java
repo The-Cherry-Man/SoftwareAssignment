@@ -2,6 +2,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.math.BigInteger;
 import java.util.List;
 
 public class API2SmokeTest {
@@ -11,20 +14,22 @@ public class API2SmokeTest {
     }
     
     @Test
-    public void readTest(){
-        UserNumber k = 5;
+    public void readTest() throws FileNotFoundException {
+        InMemoryUserNumber k = new InMemoryUserNumber();
+        k.setInMemoryUserNumber(5);
         DataProcessBoundaryAPI dpba = new DataProcessBoundaryAPI();
         List read = dpba.read(k);
         Assert.assertNotNull(read);
     }
     @Test
-    public void writeTest() {
-        UserNumber k = 5;
-        DelimeterOutput d = '/';
-        ConfigKey c = 1000;
+    public void writeTest() throws IOException {
+        Delimeter d = new Delimeter();
+        BigInteger k = new BigInteger(String.valueOf(5));
+        Destination c = new Destination("text");
+        d.setDelimeter(':');
         DataProcessBoundaryAPI dpba = new DataProcessBoundaryAPI();
-        List read = dpba.read(k, d, c);
-        Assert.assertNotNull(read);
+        List write = (List) dpba.write(k, d, c);
+        Assert.assertNotNull(write);
     }
 
 }
