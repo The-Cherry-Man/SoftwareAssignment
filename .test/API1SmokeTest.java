@@ -55,17 +55,17 @@ public class API1SmokeTest {
 
         UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
-        ConfigKey useredNumberInput = unba.userNumberInput(new UserNumberInt(4));
+        ConfigKey userNumberInput = unba.userNumberInput(new UserNumberInt(4));
 
-        ConfigKey useredDel = unba.delimeterOuput(new Delimeter('/'));
+        ConfigKey userDel = unba.delimeterOuput(new Delimeter('/'));
 
-        ConfigKey usereddestination = unba.destinationOutput(new Destination("Test Destination"));
+        ConfigKey userdestination = unba.destinationOutput(new Destination("Test Destination"));
 
-        c.addKey(useredNumberInput);
+        c.addKey(userNumberInput);
 
-        c.addKey(useredDel);
+        c.addKey(userDel);
 
-        c.addKey(usereddestination);
+        c.addKey(userdestination);
 
         Result compute = unba.compute(c);
 
