@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.Collection;
@@ -15,7 +16,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         Map<ConfigKey,Destination> destinationMap =  new HashMap<>();
 
-        Map<ConfigKey,Object> usernumberMap =  new HashMap<>();
+        Map<ConfigKey,UserNumber> usernumberMap =  new HashMap<>();
 
         ConfigKeyCollection collection = new ConfigKeyCollection();
 
@@ -61,7 +62,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
     }
 
     @Override
-    public Result compute(ConfigKeyCollection c) {// read --> computation --> write
+    public Result compute(ConfigKeyCollection c) throws IOException {// read --> computation --> write
 
         List<ConfigKey> keys = c.getListOfKeys();
 
