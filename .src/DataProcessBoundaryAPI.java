@@ -26,8 +26,17 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
 
             return loadIntegersFromFile(((FileUserNumber)n).getFileName());
 
-        } else {
-                return null;
+        } else if (n instanceof UserNumberInt){
+            
+            List<Integer> l = new ArrayList<>();
+
+            l.add(((UserNumberInt) n).getUsernumber());
+
+            return l;
+
+        } else{
+
+            return null;
         }
     }
 
