@@ -22,6 +22,10 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         public UserNetworkBoundaryAPI() {
 
+            api2 = new DataProcessBoundaryAPI();
+
+            api3 = new ComputeConceptualBoundaryAPI();
+
          }
 
     @Override
