@@ -16,7 +16,7 @@ public class TestUser {
 
     public void run(String outputPath) throws IOException {
         char delimiter = ';';
-        String inputPath = "test" + File.separatorChar + "testInputFile.test";
+        String inputPath = ".test" + File.separatorChar + "testInputFile.txt";
 
         // TODO 4: Call the appropriate method(s) on the coordinator to get it to
         // run the compute job specified by inputPath, outputPath, and delimiter
