@@ -28,7 +28,7 @@ public class API2SmokeTest {
         Destination c = new Destination("text");
         d.setDelimeter(':');
         DataProcessBoundaryAPI dpba = new DataProcessBoundaryAPI();
-        List write = (List) dpba.write(k, d, c);
+        Response write = dpba.write(k, d, c);
         Assert.assertNotNull(write);
     }
 
