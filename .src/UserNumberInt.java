@@ -8,9 +8,20 @@ public class UserNumberInt implements UserNumber{
 
     }
 
+    public UserNumberInt(int num){
+
+        this.usernumber = num;
+    }
+
     public int getUsernumber(){
 
         return usernumber;
+
+    }
+
+    public void setUserNumberInt(int n){
+
+        this.usernumber = n;
 
     }
 }
