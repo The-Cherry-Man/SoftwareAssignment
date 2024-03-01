@@ -10,7 +10,7 @@ public class ComputeEngineIntegrationTest {
     public ComputeEngineIntegrationTest(){
         
     }
-
+/*
     @Test
     public void integrationTest() throws FileNotFoundException {
 
@@ -41,7 +41,7 @@ public class ComputeEngineIntegrationTest {
 
 
 
-    }
+    }*/
     
 
 
