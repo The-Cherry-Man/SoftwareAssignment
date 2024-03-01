@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 
 public class TestMultiUser {
 
-    public TestMultiUser{
+    public TestMultiUser(){
         
     }
 
@@ -59,7 +59,13 @@ public class TestMultiUser {
             multiThreadedOut.deleteOnExit();
             String multiThreadOutputPath = multiThreadedOut.getCanonicalPath();
             TestUser testUser = testUsers.get(i);
-            results.add(threadPool.submit(() -> testUser.run(multiThreadOutputPath)));
+            results.add(threadPool.submit(() -> {
+                try {
+                    testUser.run(multiThreadOutputPath);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }));
         }
 
         results.forEach(future -> {
