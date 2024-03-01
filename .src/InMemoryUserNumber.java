@@ -1,18 +1,19 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class InMemoryUserNumber implements UserNumber{
-
-    int chosenNumber;
 
     private List<Integer> inputData;
 
     public InMemoryUserNumber(){
 
-
+        inputData = new ArrayList<>();
     }
+    
     public InMemoryUserNumber(int i){
-        this.chosenNumber = i;
-
+        
+        this.inputData.add(i);
+        
     }
 
     public List<Integer> getInputData(){
@@ -22,6 +23,8 @@ public class InMemoryUserNumber implements UserNumber{
     }
 
     public void setInMemoryUserNumber(int i) {
-        this.chosenNumber = i;
+        
+        this.inputData.add(i);
+        
     }
 }
