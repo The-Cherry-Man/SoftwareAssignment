@@ -68,12 +68,22 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.TestMultiUser.compareMultiAndSingleThreaded">
+  <component name="RunManager" selected="JUnit.API2SmokeTest.readTest">
     <configuration name="API1SmokeTest.userInputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareAssignment" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="API1SmokeTest" />
       <option name="METHOD_NAME" value="userInputTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="API1SmokeTest.userinputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoftwareAssignment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="API1SmokeTest" />
+      <option name="METHOD_NAME" value="userinputTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,23 +119,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMultiUser.compareMultiAndSingleThreaded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SoftwareAssignment" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestMultiUser" />
-      <option name="METHOD_NAME" value="compareMultiAndSingleThreaded" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestMultiUser.compareMultiAndSingleThreaded" />
-        <item itemvalue="JUnit.API2SmokeTest.writeTest" />
         <item itemvalue="JUnit.API2SmokeTest.readTest" />
         <item itemvalue="JUnit.API3SmokeTest.testInput" />
+        <item itemvalue="JUnit.API2SmokeTest.writeTest" />
         <item itemvalue="JUnit.API1SmokeTest.userInputTest" />
+        <item itemvalue="JUnit.API1SmokeTest.userinputTest" />
       </list>
     </recent_temporary>
   </component>
