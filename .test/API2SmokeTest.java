@@ -25,7 +25,7 @@ public class API2SmokeTest {
     public void writeTest() throws IOException {
         Delimeter d = new Delimeter();
         BigInteger k = new BigInteger(String.valueOf(5));
-        Destination c = new Destination("text");
+        Destinations c = new Destinations("text");
         d.setDelimeter(':');
         DataProcessBoundaryAPI dpba = new DataProcessBoundaryAPI();
         Response write = dpba.write(k, d, c);

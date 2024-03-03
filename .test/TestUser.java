@@ -27,7 +27,7 @@ public class TestUser {
 
         coordinator.userNumberInput(f);
 
-        coordinator.destinationOutput(new Destination(outputPath));
+        coordinator.destinationOutput(new Destinations(outputPath));
 
         coordinator.delimeterOuput(new Delimeter(delimiter));
 

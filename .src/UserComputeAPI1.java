@@ -10,7 +10,7 @@ public interface UserComputeAPI1 {
     ConfigKey delimeterOuput(Delimeter d);
 
     //Sets the destination of the data results
-    ConfigKey destinationOutput(Destination d);
+    ConfigKey destinationOutput(Destinations d);
 
    Result compute(ConfigKeyCollection c) throws IOException;
 

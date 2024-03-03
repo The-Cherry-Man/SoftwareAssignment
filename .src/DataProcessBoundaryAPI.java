@@ -59,7 +59,7 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
     }
 
     @Override
-    public Response write(BigInteger n, Delimeter d, Destination e) throws IOException {
+    public Response write(BigInteger n, Delimeter d, Destinations e) throws IOException {
 
         Response r = new Response();
 
