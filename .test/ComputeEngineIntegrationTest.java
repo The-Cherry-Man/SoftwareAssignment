@@ -18,7 +18,8 @@ public class ComputeEngineIntegrationTest {
         InMemoryDataStoreTest imds = new InMemoryDataStoreTest();
         List<Integer> n =  imds.getInput();
 
-        InMemoryUserNumber imun = new InMemoryUserNumber(n.get(0));
+        InMemoryUserNumberTest imun = new InMemoryUserNumberTest();
+        imun.getInput();
 
         Delimeter d = new Delimeter('/');
 
@@ -26,7 +27,7 @@ public class ComputeEngineIntegrationTest {
         ConfigKey c = new ConfigKey(1);
 
         UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI();
-        unba.userNumberInput(imun);
+        unba.userNumberInput((UserNumber) imun);
         unba.delimeterOuput(d);
         Destinations des = new Destinations();
         des.setDestination(x.get(0));
@@ -37,7 +38,7 @@ public class ComputeEngineIntegrationTest {
         collection.addKey(c);
 
         DataProcessBoundaryAPI dpba = new DataProcessBoundaryAPI();
-        dpba.read(imun);
+        dpba.read((UserNumber)imun);
 
         ComputeConceptualBoundaryAPI ccba = new ComputeConceptualBoundaryAPI();
         int i = 5;
