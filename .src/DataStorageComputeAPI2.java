@@ -11,6 +11,6 @@ public interface DataStorageComputeAPI2 {
 
 
     //Writes to user's destination
-    Response write(BigInteger n, Delimeter d, Destination e) throws IOException;
+    Response write(BigInteger n, Delimeter d, Destinations e) throws IOException;
 
 }

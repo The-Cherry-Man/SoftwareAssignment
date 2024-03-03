@@ -37,7 +37,7 @@ public class API1SmokeTest {
     @Test
     public void destinationTest(){
 
-        Destination s = new Destination();
+        Destinations s = new Destinations();
 
         s.setDestination("destination");
 
@@ -59,7 +59,7 @@ public class API1SmokeTest {
 
         ConfigKey userDel = unba.delimeterOuput(new Delimeter('/'));
 
-        ConfigKey userdestination = unba.destinationOutput(new Destination("Test Destination"));
+        ConfigKey userdestination = unba.destinationOutput(new Destinations("Test Destination"));
 
         c.addKey(userNumberInput);
 

@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import javax.print.attribute.standard.Destination;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 public class ComputeEngineIntegrationTest {
@@ -10,12 +11,14 @@ public class ComputeEngineIntegrationTest {
     public ComputeEngineIntegrationTest(){
         
     }
-/*
+
     @Test
-    public void integrationTest() throws FileNotFoundException {
+    public void integrationTest() throws IOException {
 
         InMemoryDataStoreTest imds = new InMemoryDataStoreTest();
-        InMemoryUserNumberTest n = (InMemoryUserNumberTest) imds.getInput();
+        List<Integer> n =  imds.getInput();
+
+        InMemoryUserNumber imun = new InMemoryUserNumber(n.get(0));
 
         Delimeter d = new Delimeter('/');
 
@@ -23,25 +26,32 @@ public class ComputeEngineIntegrationTest {
         ConfigKey c = new ConfigKey(1);
 
         UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI();
-        unba.userNumberInput((UserNumber) n);
+        unba.userNumberInput(imun);
         unba.delimeterOuput(d);
-        unba.destinationOutput(x);
-        unba.configKeyCollection(c);
+        Destinations des = new Destinations();
+        des.setDestination(x.get(0));
+        unba.destinationOutput(des);
+        //unba.configKeyCollection(c);
+
+        ConfigKeyCollection collection = new ConfigKeyCollection();
+        collection.addKey(c);
 
         DataProcessBoundaryAPI dpba = new DataProcessBoundaryAPI();
-        dpba.read((UserNumber) n);
-        dpba.write(n, d, c);
+        dpba.read(imun);
 
         ComputeConceptualBoundaryAPI ccba = new ComputeConceptualBoundaryAPI();
         int i = 5;
-        ccba.computation(i);
+
+        dpba.write(ccba.computation(i), d, des);
+
+
 
         Assert.assertNotNull(x);
 
 
 
 
-    }*/
+    }
     
 
 

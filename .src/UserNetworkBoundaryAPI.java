@@ -14,7 +14,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         Map<ConfigKey,Delimeter> delmeterMap =  new HashMap<>();
 
-        Map<ConfigKey,Destination> destinationMap =  new HashMap<>();
+        Map<ConfigKey,Destinations> destinationMap =  new HashMap<>();
 
         Map<ConfigKey,UserNumber> usernumberMap =  new HashMap<>();
 
@@ -54,7 +54,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
     }
 
     @Override
-    public ConfigKey destinationOutput(Destination des) {
+    public ConfigKey destinationOutput(Destinations des) {
 
         ConfigKey key = new ConfigKey();
 
@@ -72,7 +72,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         Result r = new Result();
 
-        Destination destination = null;
+        Destinations destination = null;
 
         Delimeter delimeter = null;
 
