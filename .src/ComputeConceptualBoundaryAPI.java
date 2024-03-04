@@ -11,12 +11,12 @@ public class ComputeConceptualBoundaryAPI extends Thread implements ComputeEngin
 
     public void setInteger(Integer i){
 
-        this.i = i;
+        this.numberinput = i;
     }
 
     public BigInteger getCompAnswer(){
 
-        return b;
+        return result;
     }
 
   public BigInteger computation(Integer i){
@@ -50,7 +50,7 @@ public class ComputeConceptualBoundaryAPI extends Thread implements ComputeEngin
 
   public void run(){
 
-     computation(this.i);
+     computation(this.numberinput);
 
   }
 
