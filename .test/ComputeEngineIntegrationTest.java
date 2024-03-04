@@ -26,28 +26,28 @@ public class ComputeEngineIntegrationTest {
         List<String> x = imds.getOutput();  //Should it be List<String>?
         ConfigKey c = new ConfigKey(1);
 
-        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI();
-        unba.userNumberInput((UserNumber) imun);
-        unba.delimeterOuput(d);
-        Destinations des = new Destinations();
-        des.setDestination(x.get(0));
-        unba.destinationOutput(des);
+        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI(imds, new ComputeConceptualBoundaryAPI());
+        ConfigKey configKey = unba.userNumberInput((UserNumber) imun);
+        ConfigKey configKey1 = unba.delimeterOuput(d);
+        InMemoryDestinationTest imd = new InMemoryDestinationTest();
+        ConfigKey configKey2 = unba.destinationOutput(imd);
         //unba.configKeyCollection(c);
 
         ConfigKeyCollection collection = new ConfigKeyCollection();
-        collection.addKey(c);
+        collection.addKey(configKey);
+        collection.addKey(configKey1);
+        collection.addKey(configKey2);
 
         DataProcessBoundaryAPI dpba = new DataProcessBoundaryAPI();
         dpba.read((UserNumber)imun);
 
-        ComputeConceptualBoundaryAPI ccba = new ComputeConceptualBoundaryAPI();
-        int i = 5;
+        unba.compute(collection);
 
-        dpba.write(ccba.computation(i), d, des);
-
+        List list = imd.getList();
 
 
-        Assert.assertNotNull(x);
+
+        Assert.assertEquals(6, list.size());
 
 
 
