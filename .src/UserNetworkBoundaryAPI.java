@@ -117,10 +117,11 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
             api2.write(computationAnswer, delimeter, destination);
         }
 
-        //Multithread
+        //Multithreading attempt not sure how to add API 3 to thread pool 
+            
         BigInteger computationAnswerThread;
 
-     /*   for (int i = 0; i < read.size(); ++i) {
+        for (int i = 0; i < read.size(); ++i) {
 
             api3.setInteger(read.get(i));
 
@@ -134,9 +135,11 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
             computationAnswerThread = api3.getCompAnswer();
 
+            executor.submit((Runnable) computationAnswerThread);
+
             api2.write(computationAnswerThread, delimeter, destination);
 
-        }*/
+        }
 
 
         return r;
