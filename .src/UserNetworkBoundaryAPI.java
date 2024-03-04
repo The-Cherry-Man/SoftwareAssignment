@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
-        private DataProcessBoundaryAPI api2;
+        private DataStorageComputeAPI2 api2;
 
         private ComputeConceptualBoundaryAPI api3;
 
@@ -20,13 +20,17 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         ConfigKeyCollection collection = new ConfigKeyCollection();
 
-        public UserNetworkBoundaryAPI() {
+        public UserNetworkBoundaryAPI(DataStorageComputeAPI2 api2, ComputeConceptualBoundaryAPI api3) {
 
-            api2 = new DataProcessBoundaryAPI();
+            this.api2 = api2;
 
-            api3 = new ComputeConceptualBoundaryAPI();
+            this.api3 = api3;
 
          }
+
+    public UserNetworkBoundaryAPI() {
+
+    }
 
     @Override
     public ConfigKey userNumberInput(UserNumber usernumber) {
