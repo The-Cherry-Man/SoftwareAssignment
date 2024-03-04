@@ -1,7 +1,10 @@
 import junit.framework.Assert;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.math.BigInteger;
+import java.util.List;
 
 public class API1SmokeTest {
 
@@ -51,9 +54,12 @@ public class API1SmokeTest {
     @Test
     public void computeTest() throws IOException {
 
+        
+        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(), new ComputeConceptualBoundaryAPI());
+
+
         ConfigKeyCollection c = new ConfigKeyCollection();
 
-        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI();
 
         ConfigKey userNumberInput = unba.userNumberInput(new UserNumberInt(4));
 
@@ -70,6 +76,6 @@ public class API1SmokeTest {
         Result compute = unba.compute(c);
 
         Assert.assertNotNull(compute);
-    }
+    };
 }
 
