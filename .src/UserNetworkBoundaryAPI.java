@@ -5,8 +5,10 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-public class UserNetworkBoundaryAPI implements UserComputeAPI1{
+public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
         private DataStorageComputeAPI2 api2;
 
@@ -19,6 +21,8 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
         Map<ConfigKey,UserNumber> usernumberMap =  new HashMap<>();
 
         ConfigKeyCollection collection = new ConfigKeyCollection();
+
+        ExecutorService executor = Executors.newFixedThreadPool(7);
 
         public UserNetworkBoundaryAPI(DataStorageComputeAPI2 api2, ComputeConceptualBoundaryAPI api3) {
 
@@ -106,13 +110,35 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1{
 
         List<Integer> read = api2.read(o);
 
-        for(int i = 0; i < read.size(); ++i){
+        for (int i = 0; i < read.size(); ++i) {
 
             computationAnswer = api3.computation(read.get(i));
 
-            api2.write(computationAnswer,delimeter,destination);
+            api2.write(computationAnswer, delimeter, destination);
         }
-        
+
+        //Multithread
+        BigInteger computationAnswerThread;
+
+     /*   for (int i = 0; i < read.size(); ++i) {
+
+            api3.setInteger(read.get(i));
+
+            api3.start();
+            api3.start();
+            api3.start();
+            api3.start();
+            api3.start();
+            api3.start();
+            api3.start();
+
+            computationAnswerThread = api3.getCompAnswer();
+
+            api2.write(computationAnswerThread, delimeter, destination);
+
+        }*/
+
+
         return r;
     }
 }

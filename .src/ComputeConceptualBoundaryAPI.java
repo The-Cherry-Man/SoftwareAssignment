@@ -1,8 +1,22 @@
 import java.math.BigInteger;
-public class ComputeConceptualBoundaryAPI implements ComputeEngineAPI3 {
+public class ComputeConceptualBoundaryAPI extends Thread implements ComputeEngineAPI3 {
+
+    private Integer numberinput;
+
+    private BigInteger result;
 
     public ComputeConceptualBoundaryAPI() {
 
+    }
+
+    public void setInteger(Integer i){
+
+        this.numberinput = i;
+    }
+
+    public BigInteger getCompAnswer(){
+
+        return result;
     }
 
   public BigInteger computation(Integer i){
@@ -32,6 +46,12 @@ public class ComputeConceptualBoundaryAPI implements ComputeEngineAPI3 {
           }
       }
       return product;
+  }
+
+  public void run(){
+
+     computation(this.numberinput);
+
   }
 
 }
