@@ -76,6 +76,7 @@ public class API1SmokeTest {
         Result compute = unba.compute(c);
 
         Assert.assertNotNull(compute);
-    };
+    }
+ 
 }
 
