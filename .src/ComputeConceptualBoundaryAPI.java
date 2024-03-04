@@ -1,9 +1,9 @@
 import java.math.BigInteger;
 public class ComputeConceptualBoundaryAPI extends Thread implements ComputeEngineAPI3 {
 
-    private Integer i;
+    private Integer numberinput;
 
-    private BigInteger b;
+    private BigInteger result;
 
     public ComputeConceptualBoundaryAPI() {
 
