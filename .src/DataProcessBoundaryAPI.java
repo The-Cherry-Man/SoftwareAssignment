@@ -44,13 +44,8 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
         List<Integer> userlist = new ArrayList<>();
 
         Scanner userfile = new Scanner(new File(fileName)).useDelimiter(",\\s*");
-
-        //BufferedReader reader= new BufferedReader(new FileReader(fileName));
-
-       // fileLength = userfile.hasNextInt();
         
         ArrayList<Integer> a = new ArrayList<>();
-
 
         while (userfile.hasNextInt()) {
             int number = userfile.nextInt();
@@ -58,13 +53,7 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
             userlist.add(number);
         }
 
-
-      /*  for(int i =0; i<fileLength; ++i){
-
-            userlist.add(i,userfile.nextInt());
-        }
-
-        */return userlist;
+       return userlist;
     }
 
     @Override
