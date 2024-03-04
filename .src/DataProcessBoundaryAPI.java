@@ -1,9 +1,6 @@
 
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,20 +39,32 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
 
     private List<Integer> loadIntegersFromFile(String fileName) throws FileNotFoundException {
 
-        int fileLength;
+        int fileLength = 0;
 
         List<Integer> userlist = new ArrayList<>();
 
-        Scanner userfile = new Scanner(new File(fileName));
+        Scanner userfile = new Scanner(new File(fileName)).useDelimiter(",\\s*");
 
-        fileLength = userfile.nextInt();
+        //BufferedReader reader= new BufferedReader(new FileReader(fileName));
 
-        for(int i =0; i<fileLength; ++i){
+       // fileLength = userfile.hasNextInt();
+        
+        ArrayList<Integer> a = new ArrayList<>();
+
+
+        while (userfile.hasNextInt()) {
+            int number = userfile.nextInt();
+
+            userlist.add(number);
+        }
+
+
+      /*  for(int i =0; i<fileLength; ++i){
 
             userlist.add(i,userfile.nextInt());
         }
 
-        return userlist;
+        */return userlist;
     }
 
     @Override

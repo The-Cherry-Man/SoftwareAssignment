@@ -4,88 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fa0026e-adb1-4178-8ce4-9d111b492033" name="Changes" comment="" />
+    <list default="true" id="626cb314-c3c3-4f54-8648-bd55c048c454" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2cuYWuK7WlqypqDeu6P9W9CXRBS" />
+  <component name="ProjectId" id="2d64TEtBootMyhjY0sAU4dFoFLw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.API1SmokeTest.computeTest.executor": "Run",
-    "JUnit.API1SmokeTest.executor": "Run",
-    "JUnit.API1SmokeTest.userInputTest.executor": "Debug",
-    "JUnit.API1SmokeTest.userinputTest.executor": "Run",
-    "JUnit.API2SmokeTest.executor": "Run",
-    "JUnit.API2SmokeTest.readTest.executor": "Run",
-    "JUnit.API2SmokeTest.writeTest.executor": "Run",
-    "JUnit.API3SmokeTest.executor": "Run",
-    "JUnit.API3SmokeTest.testInput.executor": "Run",
-    "JUnit.ComputeEngineIntegrationTest.integrationTest.executor": "Run",
-    "JUnit.TestMultiUser.compareMultiAndSingleThreaded.executor": "Run",
-    "JUnit.TestMultiUser.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/htlon/Desktop/Software Engineering/sampleCodeImplementation",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jonae/IdeaProjects/Api Implementations&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.ComputeEngineIntegrationTest.integrationTest">
-    <configuration name="API2SmokeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="API1SmokeTest.computeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareAssignment" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="API2SmokeTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="API1SmokeTest" />
+      <option name="METHOD_NAME" value="computeTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="API3SmokeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="API2SmokeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareAssignment" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="API3SmokeTest" />
+      <option name="MAIN_CLASS_NAME" value="API2SmokeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,67 +80,33 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ComputeEngineIntegrationTest.integrationTest" />
-        <item itemvalue="JUnit.TestMultiUser" />
         <item itemvalue="JUnit.TestMultiUser.compareMultiAndSingleThreaded" />
+        <item itemvalue="JUnit.TestMultiUser" />
+        <item itemvalue="JUnit.API1SmokeTest.computeTest" />
         <item itemvalue="JUnit.API2SmokeTest" />
-        <item itemvalue="JUnit.API3SmokeTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3fa0026e-adb1-4178-8ce4-9d111b492033" name="Changes" comment="" />
-      <created>1708962968373</created>
+      <changelist id="626cb314-c3c3-4f54-8648-bd55c048c454" name="Changes" comment="" />
+      <created>1709315200383</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1708962968373</updated>
+      <updated>1709315200383</updated>
     </task>
     <servers />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.util.InputMismatchException" package="java.util" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/.test/TestMultiUser.java</url>
+          <line>15</line>
           <option name="timeStamp" value="1" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/.src/DataProcessBoundaryAPI.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/.src/UserNetworkBoundaryAPI.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/.test/TestUser.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/.test/TestMultiUser.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/.test/TestMultiUser.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/.test/ComputeEngineIntegrationTest.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
-      </pinned-members>
-    </pin-to-top-manager>
   </component>
 </project>

@@ -16,22 +16,28 @@ public class TestUser {
 
     public void run(String outputPath) throws IOException {
         char delimiter = ';';
-        String inputPath = ".test" + File.separatorChar + "testInputFile.txt";
+        String inputPath = ".test" + File.separatorChar + "testInputFile.test.txt";
 
         // TODO 4: Call the appropriate method(s) on the coordinator to get it to
         // run the compute job specified by inputPath, outputPath, and delimiter
 
         FileUserNumber f = new FileUserNumber(inputPath);
 
+        ConfigKey useredNumberInputKey = coordinator.userNumberInput(f);
 
+        ConfigKey destinationOutputKey = coordinator.destinationOutput(new Destinations(outputPath));
 
-        coordinator.userNumberInput(f);
+        ConfigKey delimeterOuputKey = coordinator.delimeterOuput(new Delimeter(delimiter));
 
-        coordinator.destinationOutput(new Destinations(outputPath));
+        ConfigKeyCollection c = new ConfigKeyCollection();
 
-        coordinator.delimeterOuput(new Delimeter(delimiter));
+        c.addKey(useredNumberInputKey);
 
-        coordinator.compute(coordinator.collection);
+        c.addKey(destinationOutputKey);
+
+        c.addKey(delimeterOuputKey);
+
+        coordinator.compute(c);
 
     }
 

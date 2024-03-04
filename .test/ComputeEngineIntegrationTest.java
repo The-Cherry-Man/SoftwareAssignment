@@ -1,6 +1,5 @@
 import org.junit.Assert;
 import org.junit.Test;
-
 import javax.print.attribute.standard.Destination;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,7 +8,9 @@ import java.util.List;
 public class ComputeEngineIntegrationTest {
 
     public ComputeEngineIntegrationTest(){
-        
+
+
+
     }
 
     @Test
@@ -45,16 +46,8 @@ public class ComputeEngineIntegrationTest {
 
         dpba.write(ccba.computation(i), d, des);
 
-
-
         Assert.assertNotNull(x);
 
-
-
-
     }
-    
-
-
 
 }
