@@ -42,19 +42,19 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
 
     private List<Integer> loadIntegersFromFile(String fileName) throws FileNotFoundException {
 
-        int fileLength;
-
         List<Integer> userlist = new ArrayList<>();
 
-        Scanner userfile = new Scanner(new File(fileName));
+        Scanner userfile = new Scanner(new File(fileName)).useDelimiter(",\\s*");
+        
+        ArrayList<Integer> a = new ArrayList<>();
 
-        fileLength = userfile.nextInt();
+        while (userfile.hasNextInt()) {
+            
+            int number = userfile.nextInt();
 
-        for(int i =0; i<fileLength; ++i){
-
-            userlist.add(i,userfile.nextInt());
+            userlist.add(number);
         }
-
+        
         return userlist;
     }
 
