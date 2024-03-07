@@ -1,12 +1,8 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigInteger;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.*;
+import java.util.concurrent.*;
 
 public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
@@ -74,7 +70,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
     }
 
     @Override
-    public Result compute(ConfigKeyCollection c) throws IOException {// read --> computation --> write
+    public Result compute(ConfigKeyCollection c) throws IOException, ExecutionException, InterruptedException {// read --> computation --> write
 
         List<ConfigKey> keys = c.getListOfKeys();
 
@@ -110,34 +106,33 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
         List<Integer> read = api2.read(o);
 
+        List<Future<BigInteger>> futures = new ArrayList<>();
+
         for (int i = 0; i < read.size(); ++i) {
 
-            computationAnswer = api3.computation(read.get(i));
 
-            api2.write(computationAnswer, delimeter, destination);
+            int computationValue =  read.get(i);
+
+            Callable<BigInteger> compute = () -> {
+
+
+                return api3.computation(computationValue);
+
+            };
+
+            Future<BigInteger> submit = executor.submit(compute);
+
+            futures.add(submit);
         }
 
-        //Multithread
-        BigInteger computationAnswerThread;
+    for (int i = 0; i < futures.size(); ++i) {
 
-     /*   for (int i = 0; i < read.size(); ++i) {
 
-            api3.setInteger(read.get(i));
+        BigInteger bigInteger = futures.get(i).get();
 
-            api3.start();
-            api3.start();
-            api3.start();
-            api3.start();
-            api3.start();
-            api3.start();
-            api3.start();
+        api2.write(bigInteger, delimeter, destination);
 
-            computationAnswerThread = api3.getCompAnswer();
-
-            api2.write(computationAnswerThread, delimeter, destination);
-
-        }*/
-
+    }
 
         return r;
     }

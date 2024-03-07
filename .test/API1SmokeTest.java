@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class API1SmokeTest {
 
@@ -52,7 +53,7 @@ public class API1SmokeTest {
     }
 
     @Test
-    public void computeTest() throws IOException {
+    public void computeTest() throws IOException, ExecutionException, InterruptedException {
 
         
         UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(), new ComputeConceptualBoundaryAPI());

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -63,6 +64,10 @@ public class TestMultiUser {
                 try {
                     testUser.run(multiThreadOutputPath);
                 } catch (IOException e) {
+                    throw new RuntimeException(e);
+                } catch (ExecutionException e) {
+                    throw new RuntimeException(e);
+                } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
             }));

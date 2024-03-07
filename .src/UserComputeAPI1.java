@@ -1,5 +1,6 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public interface UserComputeAPI1 {
 
@@ -12,7 +13,7 @@ public interface UserComputeAPI1 {
     //Sets the destination of the data results
     ConfigKey destinationOutput(Destinations d);
 
-   Result compute(ConfigKeyCollection c) throws IOException;
+   Result compute(ConfigKeyCollection c) throws IOException, ExecutionException, InterruptedException;
 
    //Delimeter Choices
     char d1 = ';';
