@@ -107,15 +107,14 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
         List<Integer> read = api2.read(o);
 
         List<Future<BigInteger>> futures = new ArrayList<>();
+    
 
         for (int i = 0; i < read.size(); ++i) {
 
 
             int computationValue =  read.get(i);
 
-            BigInteger computationAnswerThread;
-
-        for (int i = 0; i < read.size(); ++i) {
+            Callable<BigInteger> compute = () -> {
 
 
                 return api3.computation(computationValue);
@@ -127,11 +126,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
             futures.add(submit);
         }
 
-    executor.submit((Runnable) computationAnswerThread);
-
-            api2.write(computationAnswerThread, delimeter, destination);
-
-        }
+    for (int i = 0; i < futures.size(); ++i) {
 
 
         BigInteger bigInteger = futures.get(i).get();
@@ -139,6 +134,9 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
         api2.write(bigInteger, delimeter, destination);
 
     }
+      
+
+  
 
         return r;
     }
