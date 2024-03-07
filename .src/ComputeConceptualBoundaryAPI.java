@@ -48,11 +48,6 @@ public class ComputeConceptualBoundaryAPI extends Thread implements ComputeEngin
       return product;
   }
 
-  public void run(){
-
-     computation(this.numberinput);
-
-  }
 
 }
 

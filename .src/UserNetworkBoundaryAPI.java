@@ -1,12 +1,15 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigInteger;
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.Callable;
 
 public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
@@ -74,7 +77,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
     }
 
     @Override
-    public Result compute(ConfigKeyCollection c) throws IOException {// read --> computation --> write
+    public Result compute(ConfigKeyCollection c) throws IOException, ExecutionException, InterruptedException {// read --> computation --> write
 
         List<ConfigKey> keys = c.getListOfKeys();
 
@@ -110,37 +113,37 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
         List<Integer> read = api2.read(o);
 
-        for (int i = 0; i < read.size(); ++i) {
-
-            computationAnswer = api3.computation(read.get(i));
-
-            api2.write(computationAnswer, delimeter, destination);
-        }
-
-        //Multithreading attempt not sure how to add API 3 to thread pool 
-            
-        BigInteger computationAnswerThread;
+        List<Future<BigInteger>> futures = new ArrayList<>();
+    
 
         for (int i = 0; i < read.size(); ++i) {
 
-            api3.setInteger(read.get(i));
 
-            api3.start();
-            api3.start();
-            api3.start();
-            api3.start();
-            api3.start();
-            api3.start();
-            api3.start();
+            int computationValue =  read.get(i);
 
-            computationAnswerThread = api3.getCompAnswer();
+            Callable<BigInteger> compute = () -> {
 
-            executor.submit((Runnable) computationAnswerThread);
 
-            api2.write(computationAnswerThread, delimeter, destination);
+                return api3.computation(computationValue);
 
+            };
+
+            Future<BigInteger> submit = executor.submit(compute);
+
+            futures.add(submit);
         }
 
+    for (int i = 0; i < futures.size(); ++i) {
+
+
+        BigInteger bigInteger = futures.get(i).get();
+
+        api2.write(bigInteger, delimeter, destination);
+
+    }
+      
+
+  
 
         return r;
     }

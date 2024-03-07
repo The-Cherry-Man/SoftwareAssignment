@@ -5,6 +5,7 @@ import javax.print.attribute.standard.Destination;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class ComputeEngineIntegrationTest {
 
@@ -13,7 +14,7 @@ public class ComputeEngineIntegrationTest {
     }
 
     @Test
-    public void integrationTest() throws IOException {
+    public void integrationTest() throws IOException, ExecutionException, InterruptedException {
 
         InMemoryDataStoreTest imds = new InMemoryDataStoreTest();
         List<Integer> n =  imds.getInput();

@@ -2,6 +2,7 @@
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 
 public class TestUser {
@@ -15,7 +16,7 @@ public class TestUser {
         this.coordinator = coordinator;
     }
 
-    public void run(String outputPath) throws IOException {
+    public void run(String outputPath) throws IOException, ExecutionException, InterruptedException {
         char delimiter = ';';
         String inputPath = ".test" + File.separatorChar + "testInputFile.test.txt";
 
