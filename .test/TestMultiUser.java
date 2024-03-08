@@ -30,7 +30,7 @@ public class TestMultiUser {
         // that the user will make requests to
         // Store it in the 'coordinator' instance variable
 
-            coordinator = new UserNetworkBoundaryAPI();
+            coordinator = new UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(), new ComputeConceptualBoundaryAPI());
     }
 
     @Test
