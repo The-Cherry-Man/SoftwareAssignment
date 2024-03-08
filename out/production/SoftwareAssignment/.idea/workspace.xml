@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fa0026e-adb1-4178-8ce4-9d111b492033" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.test/API3SmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/.test/API3SmokeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.test/ComputeEngineIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/.test/ComputeEngineIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareAssignment/DataProcessBoundaryAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareAssignment/DataProcessBoundaryAPI.class" afterDir="false" />
-    </list>
+    <list default="true" id="3fa0026e-adb1-4178-8ce4-9d111b492033" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +66,7 @@
     &quot;JUnit.API3SmokeTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.API3SmokeTest.testInput.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.API3SmokeTest.testLargeInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.API3SmokeTest.testNegativeInput.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.API3SmokeTest.testOneInput.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ComputeEngineIntegrationTest.executor&quot;: &quot;Debug&quot;,
     &quot;JUnit.ComputeEngineIntegrationTest.integrationTest.executor&quot;: &quot;Debug&quot;,
@@ -88,7 +84,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Trash">
+  <component name="RunManager" selected="JUnit.ComputeEngineIntegrationTest.integrationTest">
     <configuration name="Trash" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Trash" />
       <module name="SoftwareAssignment" />
@@ -96,12 +92,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="API3SmokeTest.testInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="API3SmokeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareAssignment" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="API3SmokeTest" />
-      <option name="METHOD_NAME" value="testInput" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,11 +111,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="API3SmokeTest.testOneInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="API3SmokeTest.testNegativeInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareAssignment" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="API3SmokeTest" />
-      <option name="METHOD_NAME" value="testOneInput" />
+      <option name="METHOD_NAME" value="testNegativeInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Trash" />
-        <item itemvalue="JUnit.API3SmokeTest.testLargeInput" />
-        <item itemvalue="JUnit.API3SmokeTest.testInput" />
-        <item itemvalue="JUnit.API3SmokeTest.testOneInput" />
         <item itemvalue="JUnit.ComputeEngineIntegrationTest.integrationTest" />
+        <item itemvalue="Application.Trash" />
+        <item itemvalue="JUnit.API3SmokeTest.testNegativeInput" />
+        <item itemvalue="JUnit.API3SmokeTest" />
+        <item itemvalue="JUnit.API3SmokeTest.testLargeInput" />
       </list>
     </recent_temporary>
   </component>
