@@ -20,7 +20,6 @@ public class ComputeEngineIntegrationTest {
         List<Integer> n =  imds.getInput();
 
         InMemoryUserNumberTest imun = new InMemoryUserNumberTest();
-        imun.getInput();
 
         Delimeter d = new Delimeter('/');
 
@@ -40,7 +39,7 @@ public class ComputeEngineIntegrationTest {
         collection.addKey(configKey2);
 
         DataProcessBoundaryAPI dpba = new DataProcessBoundaryAPI();
-        dpba.read((UserNumber)imun);
+        dpba.read(imun);
 
         unba.compute(collection);
 
