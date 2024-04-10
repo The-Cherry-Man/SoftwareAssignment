@@ -15,7 +15,7 @@ public class FactorialServer { // Boilerplate TODO: Change name of class //Done
         int port = 50051; // Boilerplate TODO: Consider changing the port (only one server per port)
 
         server = Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create())
-                .addService(new FactorialServerImpl()) // Boilerplate TODO: Change name of class //Done
+                .addService((BindableService)new FactorialServerImpl()) // Boilerplate TODO: Change name of class //Done
                 .addService(ProtoReflectionService.newInstance())
                 .build()
                 .start();
