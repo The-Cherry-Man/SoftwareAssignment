@@ -9,20 +9,25 @@ apply plugin: 'idea'
 sourceSets {
 	main {
 		java {
-			srcDirs = ['.src',
-					   'build/generated/source/proto/main/grpc',
-					   'build/generated/source/proto/main/java']
+
+			srcDirs = ['src',
+					       'build/generated/source/proto/main/grpc',
+					       'build/generated/source/proto/main/java']
 		}
 	}
 	test {
 		java {
-			srcDirs = ['.test']
+			srcDirs = ['test']
 		}
 	}
 }
 
 repositories {
 	mavenCentral()
+}
+
+test {
+	useJUnitPlatform()
 }
 
 test {
