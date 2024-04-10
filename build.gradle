@@ -9,9 +9,10 @@ apply plugin: 'idea'
 sourceSets {
 	main {
 		java {
+
 			srcDirs = ['src',
-					   'build/generated/source/proto/main/grpc',
-					   'build/generated/source/proto/main/java']
+					       'build/generated/source/proto/main/grpc',
+					       'build/generated/source/proto/main/java']
 		}
 	}
 	test {
@@ -23,6 +24,10 @@ sourceSets {
 
 repositories {
 	mavenCentral()
+}
+
+test {
+	useJUnitPlatform()
 }
 
 test {
@@ -57,5 +62,3 @@ protobuf {
 	generateProtoTasks {
 		all()*.plugins { grpc {} }
 	}
-
-}

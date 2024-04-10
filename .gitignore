@@ -8,3 +8,4 @@
 *.iws
 # Ignore Gradle build output directory
 build
+.src/PhoneOrderServer.java
