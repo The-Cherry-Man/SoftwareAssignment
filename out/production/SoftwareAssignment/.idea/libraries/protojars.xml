@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="protojars">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Desktop/protojars" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/protojars" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Desktop/protojars" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Desktop/protojars" recursive="false" type="SOURCES" />
+  </library>
+</component>
