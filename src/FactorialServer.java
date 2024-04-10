@@ -1,4 +1,4 @@
-import java.io.IOException;
+/*import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import io.grpc.Grpc;
 import io.grpc.Server;
@@ -11,7 +11,7 @@ public class FactorialServer { // Boilerplate TODO: Change name of class //Done
     private Server server;
 
     private void start() throws IOException {
-        /* The port on which the server should run */
+        /* The port on which the server should run *//*
         int port = 50051; // Boilerplate TODO: Consider changing the port (only one server per port)
 
         server = Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create())
@@ -37,9 +37,9 @@ public class FactorialServer { // Boilerplate TODO: Change name of class //Done
         });
     }
 
-    /**
-     * Await termination on the main thread since the grpc library uses daemon threads.
-     */
+    /*
+      Await termination on the main thread since the grpc library uses daemon threads.
+     *//*
     private void blockUntilShutdown() throws InterruptedException {
         if (server != null) {
             server.awaitTermination();
@@ -51,4 +51,4 @@ public class FactorialServer { // Boilerplate TODO: Change name of class //Done
         server.start();
         server.blockUntilShutdown();
     }
-}
+}*/
