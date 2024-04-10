@@ -1,5 +1,4 @@
-public class FactorialServerImpl extends FactorialServerImplBase{
-
+public class FactorialServerImpl{
 
 
 }
