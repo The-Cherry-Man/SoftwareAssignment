@@ -1,0 +1,33 @@
+import "API1.proto";
+service DataStorageComputeService {
+
+//Takes in user's input
+ rpc read(UserNumber) returns (IntegerList){}
+
+//Writes to user's destination
+ rpc write(WriteParameters) returns (Response){}
+
+}
+message IntegerList{
+
+ repeated int32 values = 1;
+
+}
+message WriteParameters{
+
+ optional BigInteger int64 = 1;
+
+ optional Delimeter chosenDelimeter =2;
+
+ optional Destinations userDestination =3 ;
+
+}
+message BigInteger {
+
+ optional int64 value =1;
+
+}
+message Response{
+
+
+}

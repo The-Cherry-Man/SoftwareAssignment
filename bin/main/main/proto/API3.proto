@@ -1,0 +1,11 @@
+import "API2.proto";
+service ComputeEngineService {
+
+  rpc computation(Integer) returns (BigInteger){}
+
+}
+message Integer{
+
+  optional int32 value = 1;
+
+}

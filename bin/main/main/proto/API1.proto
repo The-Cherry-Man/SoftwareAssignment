@@ -1,0 +1,45 @@
+service UserNetworkBoundaryService {
+
+// Takes in user number Data
+    rpc userNumberInput(UserNumber) returns (ConfigKey){}
+
+// Chooses the users Delimiter.
+    rpc delimiterOutput(Delimeter) returns (ConfigKey){}
+
+// Sets the destination of the data results
+    rpc destinationOutput(Destinations) returns (ConfigKey){}
+
+// Compute results
+    rpc compute(ConfigKeyCollection) returns (Result){}
+
+}
+message UserNumber{
+
+
+}
+message ConfigKey{
+
+    optional int32 key = 1;
+
+    optional int32 ConfigKey = 2;
+
+}
+message Delimeter{
+
+    optional string chosenDelimeter = 1;
+
+}
+message Destinations{
+
+    optional string userDestination = 1;
+
+}
+message ConfigKeyCollection{
+
+    repeated ConfigKey listOfKeys = 1;
+
+}
+message Result{
+
+
+}
