@@ -1,11 +1,11 @@
 import java.math.BigInteger;
 import java.util.List;
 
-public class DataStoreServerImpl extends DataStorageComputeServiceGrpc.DataStorageComputeServiceImplBase{
+public class DatastoreServerImpl extends DataStorageComputeServiceGrpc.DataStorageComputeServiceImplBase{
 
     private  final DataProcessBoundaryAPI dpbapi;
 
-    public DataStoreServerImpl(){
+    public DatastoreServerImpl(){
 
         dpbapi = new DataProcessBoundaryAPI();
 
