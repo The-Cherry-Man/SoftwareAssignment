@@ -5,11 +5,11 @@ import java.util.List;
 
 public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetworkBoundaryServiceImplBase{
 
-  private final UserNetworkBoundaryAPI UNBAPI;
+  private final UserNetworkBoundaryAPI unbapi;
 
   public  FactorialServerImpl() {
 
-     UNBAPI = new UserNetworkBoundaryAPI();
+     unbapi = new UserNetworkBoundaryAPI();
 
   }
 
@@ -51,7 +51,7 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
       }
 
 
-      ConfigKey useredNumberInput = UNBAPI.userNumberInput(userNumber);
+      ConfigKey useredNumberInput = unbapi.userNumberInput(userNumber);
 
       configKey = API1.ConfigKey.newBuilder().setKey(useredNumberInput.getkey()).build();
 
@@ -79,7 +79,7 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
 
     try{
 
-      ConfigKey delimeterOuput = UNBAPI.delimeterOuput(new Delimeter(request.getChosenDelimeter()));
+      ConfigKey delimeterOuput = unbapi.delimeterOuput(new Delimeter(request.getChosenDelimeter()));
 
       configKey = API1.ConfigKey.newBuilder().setKey(delimeterOuput.getkey()).build();
 
@@ -108,7 +108,7 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
 
     try{
 
-      ConfigKey destinationOutput = UNBAPI.destinationOutput(new Destinations(request.getUserDestination()));
+      ConfigKey destinationOutput = unbapi.destinationOutput(new Destinations(request.getUserDestination()));
 
       configKey = API1.ConfigKey.newBuilder().setKey(destinationOutput.getkey()).build();
 
@@ -146,7 +146,7 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
 
       }
 
-       UNBAPI.compute(c);
+      unbapi.compute(c);
 
       result = API1.Result.newBuilder().build();
 
