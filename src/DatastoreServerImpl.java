@@ -3,11 +3,11 @@ import java.util.List;
 
 public class DataStoreServerImpl extends DataStorageComputeServiceGrpc.DataStorageComputeServiceImplBase{
 
-    private  final DataProcessBoundaryAPI DPBAPI;
+    private  final DataProcessBoundaryAPI dpbapi;
 
     public DataStoreServerImpl(){
 
-        DPBAPI = new DataProcessBoundaryAPI();
+        dpbapi = new DataProcessBoundaryAPI();
 
     }
 
@@ -48,7 +48,7 @@ public class DataStoreServerImpl extends DataStorageComputeServiceGrpc.DataStora
                 throw new IllegalArgumentException("Invalid user number input");
             }
 
-            List<Integer> resultList =  DPBAPI.read(userNumber);
+            List<Integer> resultList =  dpbapi.read(userNumber);
 
             integerList = API2.IntegerList.newBuilder().addAllValues(resultList).build();
 
@@ -84,7 +84,7 @@ public class DataStoreServerImpl extends DataStorageComputeServiceGrpc.DataStora
 
             BigInteger BI = new BigInteger(String.valueOf(request.getInt64()));
 
-            DPBAPI.write(BI,d,d2);
+            dpbapi.write(BI,d,d2);
 
             response = API2.Response.newBuilder().build();
 
