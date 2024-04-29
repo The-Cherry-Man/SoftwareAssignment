@@ -21,7 +21,7 @@ public class DatastoreServer { // Boilerplate TODO: Change name of class //Done
         int port = 50052; // Boilerplate TODO: Consider changing the port (only one server per port)
 
         server = Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create())
-                .addService(new DataStoreServerImpl()) // Boilerplate TODO: Change name of class //Done
+                .addService(new DatastoreServerImpl()) // Boilerplate TODO: Change name of class //Done
                 .addService(ProtoReflectionService.newInstance())
                 .build()
                 .start();

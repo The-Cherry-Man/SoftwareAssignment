@@ -146,9 +146,9 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
 
       }
 
-      unbapi.compute(c);
+      Result compute = unbapi.compute(c);
 
-      result = API1.Result.newBuilder().build();
+      result = API1.Result.newBuilder().setErrorMessage(compute.getErrorMessageResult()).build();
 
     }catch (Exception e){
 

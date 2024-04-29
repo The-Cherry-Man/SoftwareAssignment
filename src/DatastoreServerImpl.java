@@ -83,9 +83,9 @@ public class DatastoreServerImpl extends DataStorageComputeServiceGrpc.DataStora
 
             BigInteger bi = new BigInteger(String.valueOf(request.getInt64()));
 
-            dpbapi.write(bi,d,d2);
+            Response write = dpbapi.write(bi, d, d2);
 
-            response = API2.Response.newBuilder().build();
+            response = API2.Response.newBuilder().setErrorMessage(write.getErrorMessage()).build();
 
         }catch(Exception e) {
 
