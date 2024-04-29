@@ -46,13 +46,13 @@ public class DatastoreServer { // Boilerplate TODO: Change name of class //Done
     /**
      * Await termination on the main thread since the grpc library uses daemon threads.
      */
-        private void blockUntilShutdown () throws InterruptedException {
+        private void blockUntilShutdown() throws InterruptedException {
             if (server != null) {
                 server.awaitTermination();
             }
         }
 
-        public static void main (String[]args) throws Exception {
+        public static void main(String[]args) throws Exception {
             DatastoreServer server = new DatastoreServer(); // Boilerplate TODO: Change name of class//Done
             server.start();
             server.blockUntilShutdown();
