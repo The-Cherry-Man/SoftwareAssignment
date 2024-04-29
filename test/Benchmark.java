@@ -30,6 +30,8 @@ public class Benchmark {
 
         stats.printStats();
         stats2.printStats();
+        System.out.println(slowComputation);
+        System.out.println(fastComputation);
 
         Assert.assertNotNull(slowComputation);
         //Assert.assertEquals(BigInteger.valueOf(2), slowComputation);
