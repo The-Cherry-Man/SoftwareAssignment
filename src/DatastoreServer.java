@@ -1,17 +1,22 @@
 /*import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+<<<<<<< Updated upstream
 import io.grpc.BindableService;
+=======
+>>>>>>> Stashed changes
 import io.grpc.Grpc;
 import io.grpc.Server;
 import io.grpc.InsecureServerCredentials;
 import io.grpc.protobuf.services.ProtoReflectionService;
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 public class DatastoreServer { // Boilerplate TODO: Change name of class //Done
     private Server server;
 
+    public DatastoreServer(){
+
+
+    }
     private void start() throws IOException {
         /* The port on which the server should run *//*
         int port = 50052; // Boilerplate TODO: Consider changing the port (only one server per port)
@@ -41,10 +46,24 @@ public class DatastoreServer { // Boilerplate TODO: Change name of class //Done
 
     /**
      * Await termination on the main thread since the grpc library uses daemon threads.
+<<<<<<< Updated upstream
      *//*
     private void blockUntilShutdown() throws InterruptedException {
         if (server != null) {
             server.awaitTermination();
+=======
+     */
+        private void blockUntilShutdown() throws InterruptedException {
+            if (server != null) {
+                server.awaitTermination();
+            }
+        }
+
+        public static void main(String[]args) throws Exception {
+            DatastoreServer server = new DatastoreServer(); // Boilerplate TODO: Change name of class//Done
+            server.start();
+            server.blockUntilShutdown();
+>>>>>>> Stashed changes
         }
     }
 

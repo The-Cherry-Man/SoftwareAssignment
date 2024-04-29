@@ -18,8 +18,8 @@ sourceSets {
 		java {
 
 			srcDirs = ['src',
-					       'build/generated/source/proto/main/grpc',
-					       'build/generated/source/proto/main/java']
+					   'build/generated/source/proto/main/grpc',
+					   'build/generated/source/proto/main/java']
 		}
 	}
 	test {

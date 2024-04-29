@@ -29,5 +29,11 @@ message BigInteger {
 }
 message Response{
 
+<<<<<<< Updated upstream
+=======
+ //optional Response = 2;
+
+ optional string errorMessage = 1;
+>>>>>>> Stashed changes
 
 }
