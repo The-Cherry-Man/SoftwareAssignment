@@ -18,7 +18,9 @@ public class TimingLoggingProxy {
 				long timeEnd = System.currentTimeMillis();
 				stats.logMethod(proxyClass.getCanonicalName()+"." + method.getName(), (timeEnd - timeStart));
 				return result;
-			}});
+			}
+		}
+						 );
 	}
 
 }
