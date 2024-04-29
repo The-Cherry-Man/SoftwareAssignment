@@ -5,6 +5,11 @@ public class InMemoryUserNumber implements UserNumber{
 
     private List<Integer> inputData;
 
+    public InMemoryUserNumber(List<Integer> l){
+
+        this.inputData = l;
+    }
+
     public InMemoryUserNumber(){
 
         inputData = new ArrayList<>();

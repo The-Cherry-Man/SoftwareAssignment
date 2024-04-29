@@ -1,6 +1,5 @@
-/*import java.io.IOException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import io.grpc.BindableService;
 import io.grpc.Grpc;
 import io.grpc.Server;
@@ -13,11 +12,11 @@ public class DatastoreServer { // Boilerplate TODO: Change name of class //Done
     private Server server;
 
     private void start() throws IOException {
-        /* The port on which the server should run *//*
+        // The port on which the server should run
         int port = 50052; // Boilerplate TODO: Consider changing the port (only one server per port)
 
         server = Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create())
-                .addService(new DatastoreServerImpl()) // Boilerplate TODO: Change name of class //Done
+                .addService(new DataStoreServerImpl()) // Boilerplate TODO: Change name of class //Done
                 .addService(ProtoReflectionService.newInstance())
                 .build()
                 .start();
@@ -41,16 +40,16 @@ public class DatastoreServer { // Boilerplate TODO: Change name of class //Done
 
     /**
      * Await termination on the main thread since the grpc library uses daemon threads.
-     *//*
-    private void blockUntilShutdown() throws InterruptedException {
-        if (server != null) {
-            server.awaitTermination();
+     */
+        private void blockUntilShutdown () throws InterruptedException {
+            if (server != null) {
+                server.awaitTermination();
+            }
+        }
+
+        public static void main (String[]args) throws Exception {
+            DatastoreServer server = new DatastoreServer(); // Boilerplate TODO: Change name of class//Done
+            server.start();
+            server.blockUntilShutdown();
         }
     }
-
-    public static void main(String[] args) throws Exception {
-        DatastoreServer server = new DatastoreServer(); // Boilerplate TODO: Change name of class//Done
-        server.start();
-        server.blockUntilShutdown();
-    }
-}*/
