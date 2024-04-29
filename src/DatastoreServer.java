@@ -11,6 +11,11 @@ import java.util.concurrent.TimeUnit;
 public class DatastoreServer { // Boilerplate TODO: Change name of class //Done
     private Server server;
 
+    public DatastoreServer(){
+
+        
+    }
+
     private void start() throws IOException {
         // The port on which the server should run
         int port = 50052; // Boilerplate TODO: Consider changing the port (only one server per port)
