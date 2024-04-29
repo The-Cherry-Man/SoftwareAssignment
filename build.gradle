@@ -1,6 +1,10 @@
 plugins {
 	id 'com.google.protobuf' version '0.9.4'
 }
+project.ext.set('protobufVersion', '3.12.0')
+project.ext.set('protocVersion', project.protobufVersion)
+
+def isWindows = System.getProperty('os.name').toLowerCase().contains('windows')
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -8,6 +12,9 @@ apply plugin: 'idea'
 
 sourceSets {
 	main {
+		proto {
+			srcDir file('./proto')
+		}
 		java {
 
 			srcDirs = ['src',
@@ -57,9 +64,34 @@ dependencies {
 protobuf {
 	protoc { artifact = "com.google.protobuf:protoc:${protocVersion}" }
 	plugins {
-		grpc { artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}" }
+		grpc { 
+			artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}" 
+			path = file(
+        	'./node_modules/.bin/grpc_tools_node_protoc_plugin' + (isWindows ? '.cmd' : '')
+      	)
+    	}
+    	ts {
+      		path = file(
+        		'./node_modules/.bin/protoc-gen-ts' + (isWindows ? '.cmd' : '')
+      		)
+    	}
 	}
 	generateProtoTasks {
-		all()*.plugins { grpc {} }
+		all().each { task ->
+      		task.plugins {
+        		grpc {
+          			outputSubDir = 'js'
+          			option 'grpc_js'
+        		}
+        		ts {
+          			option 'service=grpc-node,mode=grpc-js'
+        		}
+      		}
+      			task.builtins {
+        			js {
+          				option 'import_style=commonjs'
+        			}
+	  			}	
+		}
 	}
 }
