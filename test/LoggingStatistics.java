@@ -8,6 +8,9 @@ import java.util.Map.Entry;
 /** A bare-bones instrumentation logging class that records to System.out */
 public class LoggingStatistics {
 
+	public LoggingStatistics(){
+	}
+
 	private final Map<String, MethodStats> methodStats = new HashMap<>();
 	
 	private static class MethodStats {
