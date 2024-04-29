@@ -52,7 +52,6 @@ public class DatastoreServerImpl extends DataStorageComputeServiceGrpc.DataStora
 
             integerList = API2.IntegerList.newBuilder().addAllValues(resultList).build();
 
-
         }catch(Exception e) {
 
             integerList = API2.IntegerList.newBuilder().setErrorMessage(e.getMessage()).build();
