@@ -1,5 +1,3 @@
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -63,14 +61,29 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
 
         Response r = new Response();
 
-        FileWriter fileWriter = new FileWriter(e.getDestination());
+        try {
+            FileWriter fileWriter = new FileWriter(e.getDestination());
 
             fileWriter.write(String.valueOf(n));
 
             fileWriter.write(d.getDelimeter());
 
             fileWriter.close();
+            
+        }catch(Exception a){
 
+            if(a.getMessage().isEmpty()){
+
+                r.setErrorMessage("no Errors");
+                r.setResult(true);
+
+            }else{
+
+                r.setErrorMessage(a.getMessage());
+                r.setResult(false);
+
+            }
+        }
         return r;
 
     }
