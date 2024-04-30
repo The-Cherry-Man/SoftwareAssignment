@@ -12,6 +12,8 @@ message IntegerList{
 
  repeated int32 values = 1;
 
+ optional string errorMessage = 2;
+
 }
 message WriteParameters{
 
@@ -29,5 +31,6 @@ message BigInteger {
 }
 message Response{
 
+ optional string errorMessage = 1;
 
 }
