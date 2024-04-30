@@ -34,8 +34,7 @@ public class Benchmark {
         System.out.println(fastComputation);
 
         Assert.assertNotNull(slowComputation);
-        //Assert.assertEquals(BigInteger.valueOf(2), slowComputation);
-        //Assert.assertEquals(BigInteger.valueOf(2), fastComputation);
+
 
     }
 }
