@@ -1,6 +1,6 @@
 public class Result {
 
-  boolean ResultTrueFlase = true;
+  boolean resultTrueFlase = true;
 
   String errorMessageResult;
 
@@ -10,7 +10,7 @@ public class Result {
 
   public void setResultTrueFlase(boolean b){
 
-    this.ResultTrueFlase = b;
+    this.resultTrueFlase = b;
 
   }
   public void setErrorMessageResult(String s){
@@ -25,7 +25,7 @@ public class Result {
   }
   public boolean getResultTrueFlase(){
 
-    return ResultTrueFlase;
+    return resultTrueFlase;
 
   }
 
