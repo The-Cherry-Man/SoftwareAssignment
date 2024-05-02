@@ -69,8 +69,8 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
             fileWriter.write(d.getDelimeter());
 
             fileWriter.close();
-        }
-        catch (Exception a){
+            
+        }catch (Exception a){
 
             if(a.getMessage().isEmpty()){
 
