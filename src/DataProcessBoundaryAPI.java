@@ -70,11 +70,11 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
 
             fileWriter.close();
             
-        }catch(Exception a){
+        }catch (Exception a){
 
             if(a.getMessage().isEmpty()){
 
-                r.setErrorMessage("no Errors");
+                r.setErrorMessage(a.getClass().getName());
                 r.setResult(true);
 
             }else{

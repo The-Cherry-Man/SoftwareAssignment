@@ -81,7 +81,7 @@ public class DatastoreServerImpl extends DataStorageComputeServiceGrpc.DataStora
 
             Destinations d2 = new Destinations(request.getUserDestination().getUserDestination());
 
-            BigInteger bi = new BigInteger(String.valueOf(request.getInt64()));
+            BigInteger bi = new BigInteger(String.valueOf(request.getInt64().getValue()));
 
             Response write = dpbapi.write(bi, d, d2);
 
