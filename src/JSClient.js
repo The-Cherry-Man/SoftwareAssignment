@@ -1,25 +1,47 @@
 const grpc = require('grpc');
-const protoLoader = require('@grpc/proto-loader');
+const grpcCredentials = grpc.credentials;
+const timeUnit = require('timeunit'); 
 
 
-const MAINPROTO_PATH = 'main.proto';
-const TESTPROTO_PATH = 'test.proto';
-const packageDefinition = protoLoader.loadSync(MAINPROTO_PATH);
-const myService = grpc.loadPackageDefinition(packageDefinition).MyService;
+const API1 = require('./API1'); 
+const API2 = require('./API2'); 
 
+class Client {
+    constructor(channel) {
+        this.blockingStub = new grpc.DataStorageComputeServiceGrpc.DataStorageComputeServiceBlockingStub(channel);
+    }
 
-const client = new myService.MyService('localhost:50051', grpc.credentials.createInsecure());
+    order() {
+        const request = new API2.WriteParameters({
+            chosenDelimeter: new API1.Delimeter(),
+            userDestination: new API1.Destinations(),
+            int64: new API2.BigInteger()
+        });
 
-
-function makeGrpcRequest() {
-    client.someMethod({ /* Request parameters */ }, (error, response) => {
-        if (error) {
-            console.error('Error:', error);
-        } else {
-            console.log('Response:', response);
+        let response;
+        try {
+            response = this.blockingStub.write(request);
+        } catch (e) {
+            return;
         }
-    });
+        if (response.getErrorMessage()) {
+            console.error("Error: " + response.getErrorMessage());
+        } else {
+            console.log("Order number: " + response); 
+        }
+    }
+
+    static async main() {
+        const target = "localhost:50052";
+
+        const channel = new grpc.Channel(target, grpcCredentials.createInsecure());
+        try {
+            const client = new Client(channel);
+            client.order();
+        } finally {
+            await channel.shutdown().catch(console.error); 
+        }
+    }
 }
 
-// Call the function to make the request
-makeGrpcRequest();
+Client.main().catch(console.error); 
