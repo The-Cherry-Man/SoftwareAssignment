@@ -28,9 +28,9 @@ public class Delimeter {
         this.delimeterChosen = h;
 
     }
-    public char getDelimeter(){
+    public String getDelimeter(){
 
-        return chosenDelimeter;
+        return delimeterChosen;
 
     }
 

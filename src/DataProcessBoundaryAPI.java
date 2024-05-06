@@ -1,7 +1,9 @@
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.File;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +71,12 @@ public class DataProcessBoundaryAPI implements DataStorageComputeAPI2{
             fileWriter.write(d.getDelimeter());
 
             fileWriter.close();
+
+            BufferedReader in = new BufferedReader(new FileReader(e.getDestination()));
+
+            String s = in.readLine();
+
+            System.out.println(s);
             
         }catch (Exception a){
 

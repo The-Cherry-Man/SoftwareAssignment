@@ -85,7 +85,12 @@ public class DatastoreServerImpl extends DataStorageComputeServiceGrpc.DataStora
 
             Response write = dpbapi.write(bi, d, d2);
 
-            response = API2.Response.newBuilder().setErrorMessage(write.getErrorMessage()).build();
+            API2.Response.Builder builder = API2.Response.newBuilder();
+
+            if(write.getErrorMessage() != null){
+                builder.setErrorMessage(write.getErrorMessage());
+            }
+            response = builder.build();
 
         }catch(Exception e) {
 
