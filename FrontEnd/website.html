@@ -78,14 +78,15 @@
       document.getElementById("output").addEventListener("change", function() {
         output = document.getElementById("output").value;
       })
-        document.getElementById("button").addEventListener("click", function() {
+        document.getElementById("button").addEventListener("click", function(e) {
+            e.preventDefault()
             var newRequest = new XMLHttpRequest();
 
             //looks to see if the number and/or file input are filled at button press and
             //sends the corresponding data as needed
             if(inputNumber == null && inputFile != null){
               
-              newRequest.open("POST", "http://localhost:50051/document", true);
+              newRequest.open("POST", "http://localhost:50052", true);
               newRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
               newRequest.send(JSON.stringify({file: inputFile}));
               newRequest.send(JSON.stringify({string: inputDelimiter}));
@@ -103,7 +104,7 @@
             }
             else if(inputNumber != null && inputFile == null){
               
-              newRequest.open("POST", "http://localhost:50051/document", true);
+              newRequest.open("POST", "http://localhost:50052", true);
               newRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
               newRequest.send(JSON.stringify({number: inputNumber}));
               newRequest.send(JSON.stringify({string: inputDelimiter}));
