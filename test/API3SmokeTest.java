@@ -1,6 +1,6 @@
 import junit.framework.Assert;
 //import org.junit.Test;
-import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.Test;
 import java.math.BigInteger;
 
 public class API3SmokeTest {
