@@ -28,8 +28,6 @@ message ConfigKey{
 
     optional int32 key = 1;
 
-    optional int32 ConfigKey = 2;
-
     optional string errorMessage = 3;
 
 }

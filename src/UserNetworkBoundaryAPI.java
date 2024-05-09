@@ -33,11 +33,8 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
             this.api3 = api3;
 
-         }
+        }
 
-    public UserNetworkBoundaryAPI() {
-
-    }
 
     @Override
     public ConfigKey userNumberInput(UserNumber usernumber) {

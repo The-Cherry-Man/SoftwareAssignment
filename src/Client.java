@@ -7,39 +7,39 @@ import io.grpc.ManagedChannel;
 import io.grpc.StatusRuntimeException;
 
 public class Client { // Boilerplate TODO: change to <servicename>Client
-    private final DataStorageComputeServiceGrpc.DataStorageComputeServiceBlockingStub blockingStub; // Boilerplate TODO: update to appropriate blocking stub
+    private final UserNetworkBoundaryServiceGrpc.UserNetworkBoundaryServiceBlockingStub blockingStub; // Boilerplate TODO: update to appropriate blocking stub
 
     public Client(Channel channel) {
-        blockingStub = DataStorageComputeServiceGrpc.newBlockingStub(channel);  // Boilerplate TODO: update to appropriate blocking stub
+        blockingStub = UserNetworkBoundaryServiceGrpc.newBlockingStub(channel);  // Boilerplate TODO: update to appropriate blocking stub
     }
 
     // Boilerplate TODO: replace this method with actual client call/response logic
     public void compute(int i,String d, String a) {//create instance of each
 
 
+        API1.Delimeter del = API1.Delimeter.newBuilder().setChosenDelimeter(d).build();
+        API1.UserNumber usr = API1.UserNumber.newBuilder().setUserNumberInt(i).build();
+        API1.Destinations des = API1.Destinations.newBuilder().setUserDestination(a).build();
 
-        API2.BigInteger h = API2.BigInteger.newBuilder().setValue(i).build();
+        API1.ConfigKey configKey = blockingStub.delimiterOutput(del);
+        API1.ConfigKey configKey2 = blockingStub.userNumberInput(usr);
+        API1.ConfigKey configKey3 = blockingStub.destinationOutput(des);
 
-        API2.WriteParameters request = API2.WriteParameters.newBuilder().setChosenDelimeter(API1.Delimeter.newBuilder().setChosenDelimeter(d))
-                .setUserDestination(API1.Destinations.newBuilder().setUserDestination(a)).setInt64(h).build();
+        API1.ConfigKeyCollection coll = API1.ConfigKeyCollection.newBuilder().addListOfKeys(configKey).addListOfKeys(configKey2).addListOfKeys(configKey3).build();
 
-        API2.Response response;
+        API1.Result result;
 
-        try {
-            response = blockingStub.write(request);
-        } catch (StatusRuntimeException e) {
-            e.printStackTrace();
-            return;
-        }
-        if (response.hasErrorMessage()) {
-            System.err.println("ther was an Error: " + response.getErrorMessage());
+        result = blockingStub.compute(coll);
+
+        if (result.hasErrorMessage()) {
+            System.err.println("ther was an Error: " + result.getErrorMessage());
         } else {
-            System.out.println("Order number: " + response);//need to add . to response later
+            System.out.println("Order number: " + result);//need to add . to response later
         }
     }
 
     public static void main(String[] args) throws Exception {
-        String target = "localhost:50052";  // Boilerplate TODO: make sure the server/port match the server/port you want to connect to
+        String target = "localhost:50053";  // Boilerplate TODO: make sure the server/port match the server/port you want to connect to
 
         System.out.println("Succes");
 
