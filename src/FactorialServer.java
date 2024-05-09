@@ -19,10 +19,10 @@ public class FactorialServer { // Boilerplate TODO: Change name of class //Done
         // The port on which the server should run
         int port = 50053; // Boilerplate TODO: Consider changing the port (only one server per port)
 
-        UserNetworkBoundaryAPI UNBA = new UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(),new ComputeConceptualBoundaryAPI());
+        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(),new ComputeConceptualBoundaryAPI());
         
         server = Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create())
-                .addService(new FactorialServerImpl(UNBA)) // Boilerplate TODO: Change name of class //Done
+                .addService(new FactorialServerImpl(unba)) // Boilerplate TODO: Change name of class //Done
                 .addService(ProtoReflectionService.newInstance())
                 .build()
                 .start();
