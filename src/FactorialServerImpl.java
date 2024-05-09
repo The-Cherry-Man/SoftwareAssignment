@@ -7,9 +7,9 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
 
   private final UserNetworkBoundaryAPI unbapi;
 
-  public  FactorialServerImpl(UserNetworkBoundaryAPI UNBA) {
+  public  FactorialServerImpl(UserNetworkBoundaryAPI unba) {
 
-     unbapi = UNBA;
+     unbapi = unba;
 
   }
 
