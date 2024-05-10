@@ -1,16 +1,28 @@
 # SoftwareAssignment
 
-Our Computation Discription:
+A project to showcase technical skills regarding software programming, created by Jonathan Mitchell and Harrison Long.
+
+The project is meant to showcase a user's ability to input a number, either through direct input or by file upload, 
+and have that be sent across a server to be used in a calculation that would use a large amount of the PC's CPU. 
+The result will then be output to a file that the user can specify. The end result will also have a delimiter at the end that the user can also specify.
+
+
+Our Computation Description:
 
     Takes the factorial of a number and mutiples the digits of the answer.
 
-Example:
+User Input Example:
+
+    500 ; output.txt
+
+Computation Example:
 
     10! = 10 x 9 x .... x 3 x 2 x 1 = 3,628,800,
 
     and the pruducts of the digits is 3 x 6 x 8 x 8 = 2,304
 
     excluding the multiplication of zeros
+
 
 API Diagram:
 
@@ -33,3 +45,11 @@ Updated time logging information:
     the ComputeConceptualBoundaryAPI finished in 357 milliseconds. For UpdatedCCBAPI, it finished 
     in 8 milliseconds. This is a 77.52% reduction in time. This large increase was most likely caused 
     from my lack of knowledge on BigInteger in the original class.
+
+Front End Explanation:
+
+    The front end was built with HTML, CSS, and Javascript and allows the user to input
+    their information in a very simple way. By hitting the submit button, the information is converted to JSON to
+    be sent to the java code, however due to the intricacies of gRPC, we could not find a way to execute it correctly.
+    The front end is still working however, and can be found in the folder of the same name and you can see
+    how it would have worked if everything went right.

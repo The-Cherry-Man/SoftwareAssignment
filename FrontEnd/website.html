@@ -86,7 +86,7 @@
             //sends the corresponding data as needed
             if(inputNumber == null && inputFile != null){
               
-              newRequest.open("POST", "http://localhost:50052", true);
+              newRequest.open("POST", "http://localhost:50053", true);
               newRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
               newRequest.send(JSON.stringify({file: inputFile}));
               newRequest.send(JSON.stringify({string: inputDelimiter}));
@@ -104,7 +104,7 @@
             }
             else if(inputNumber != null && inputFile == null){
               
-              newRequest.open("POST", "http://localhost:50052", true);
+              newRequest.open("POST", "http://localhost:50053", true);
               newRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
               newRequest.send(JSON.stringify({number: inputNumber}));
               newRequest.send(JSON.stringify({string: inputDelimiter}));
