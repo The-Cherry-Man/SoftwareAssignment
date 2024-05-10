@@ -1,0 +1,45 @@
+5 Why’s Software Assignment
+
+
+What Went Wrong(Testing Final Project):
+
+  Methods for the implementation of the factorial server, datastore server, and client   
+  classes were not properly functioning, causing errors in our tests. When trying to test   
+  the entire API system, we encountered errors when inputting our test parameters in the 
+  compute method in the client class.
+
+Why 1:
+
+  After initial review and bug fixing, we found that the Datastore and Factorial Server 
+  implementations did not have the expected methods and variables showing up in the request 
+  parameters for user numbers. Also, other classes like the response, result, and 
+  DataProcessBoundaryAPI classes, as well as the Delimiter class, were not adequately set 
+  up for the API system to run. As a result, methods needed to be added in order for the 
+  Data store and Factorial Server imple to function for some methods. The client class also 
+  had instance variables, such as the Write parameters, incorrectly set up, and ultimately were 
+  not needed and were removed.
+
+Why 2:
+
+  The generated Grpc files did not have the correct methods generated that were needed for the datastore and 
+  factorial server implementations, such as the user number variations and other missing methods, due to the 
+  incorrectness of the proto files. The other classes mentioned, like request and response, were initially left 
+  blank, thus having no methods and therefore not showing up in the request parameters.
+
+Why 3:
+
+  Initially, the proto files I made did not account for our multiple variations of a user number. They also had 
+  improper message definitions for the user number, response, and result messages. As for the classes, before, 
+  we could not have known in what shape or form these classes would need to be set up, so a general or blank 
+  setup was made first, with further tweaking along the way as needed until now.
+
+Why 4 Backtrack:
+
+  Figuring out what the messages and variables for each proto file needed to be was challenging and confusing. 
+  Initially, the Grpc files did not generate because I could not figure out how to set my Java home.
+
+Why 5:
+
+  The reason it did not work was because this was the first time I was working with proto files and generating 
+  Grpc servers, so I was unfamiliar with the syntax of how to set them up and was bound to make many mistakes 
+  in the process.
