@@ -1,6 +1,6 @@
 import org.junit.Assert;
-import org.junit.Test;
-
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import javax.print.attribute.standard.Destination;
 import java.io.FileNotFoundException;
 import java.io.IOException;
