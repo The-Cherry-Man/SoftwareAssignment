@@ -15,6 +15,13 @@ service UserNetworkBoundaryService {
 }
 message UserNumber{
 
+    optional UserNumber userNumber = 1;
+
+    optional int32 UserNumberInt = 2;
+
+    optional string FileUserNumber = 3;
+
+    repeated int32 InMemoryUserNumber = 4;
 
 }
 message ConfigKey{
@@ -22,6 +29,8 @@ message ConfigKey{
     optional int32 key = 1;
 
     optional int32 ConfigKey = 2;
+
+    optional string errorMessage = 3;
 
 }
 message Delimeter{
@@ -41,5 +50,5 @@ message ConfigKeyCollection{
 }
 message Result{
 
-
+    optional string errorMessage = 1;
 }
