@@ -26,7 +26,7 @@ public class ComputeEngineIntegrationTest {
         List<String> x = imds.getOutput();  //Should it be List<String>?
         ConfigKey c = new ConfigKey(1);
 
-        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI(imds, new ComputeConceptualBoundaryAPI());
+        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI(imds, new UpdatedCCBAPI());
         ConfigKey configKey = unba.userNumberInput((UserNumber) imun);
         ConfigKey configKey1 = unba.delimeterOuput(d);
         InMemoryDestinationTest imd = new InMemoryDestinationTest();

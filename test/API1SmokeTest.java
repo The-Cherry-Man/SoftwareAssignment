@@ -19,7 +19,7 @@ public class API1SmokeTest {
 
         FileUserNumber n = new FileUserNumber();
 
-        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(),new ComputeConceptualBoundaryAPI());
+        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(),new UpdatedCCBAPI());
 
         ConfigKey userdNumberInput = unba.userNumberInput(n);
 
@@ -31,7 +31,7 @@ public class API1SmokeTest {
 
         Delimeter d = new Delimeter('/');
 
-        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(),new ComputeConceptualBoundaryAPI());
+        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(),new UpdatedCCBAPI());
 
         ConfigKey configKey = unba.delimeterOuput(d);
 
@@ -45,7 +45,7 @@ public class API1SmokeTest {
 
         s.setDestination("destination");
 
-        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(),new ComputeConceptualBoundaryAPI());
+        UserNetworkBoundaryAPI unba = new  UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(),new UpdatedCCBAPI());
 
         ConfigKey destinationOutput = unba.destinationOutput(s);
 
@@ -56,7 +56,7 @@ public class API1SmokeTest {
     public void computeTest() throws IOException, ExecutionException, InterruptedException {
 
         
-        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(), new ComputeConceptualBoundaryAPI());
+        UserNetworkBoundaryAPI unba = new UserNetworkBoundaryAPI(new DataProcessBoundaryAPI(), new UpdatedCCBAPI());
 
 
         ConfigKeyCollection c = new ConfigKeyCollection();

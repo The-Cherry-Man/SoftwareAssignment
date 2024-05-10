@@ -15,7 +15,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
     private DataStorageComputeAPI2 api2;
 
-    private ComputeConceptualBoundaryAPI api3;
+    private UpdatedCCBAPI api3;
 
     Map<ConfigKey,Delimeter> delmeterMap =  new HashMap<>();
 
@@ -27,7 +27,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
     ExecutorService executor = Executors.newFixedThreadPool(7);
 
-    public UserNetworkBoundaryAPI(DataStorageComputeAPI2 api2, ComputeConceptualBoundaryAPI api3) {
+    public UserNetworkBoundaryAPI(DataStorageComputeAPI2 api2, UpdatedCCBAPI api3) {
 
         this.api2 = api2;
 
