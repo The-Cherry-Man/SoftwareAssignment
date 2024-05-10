@@ -56,3 +56,4 @@ Front End Explanation:
     be sent to the java code, however due to the intricacies of gRPC, we could not find a way to execute it correctly.
     The front end is still working however, and can be found in the folder of the same name and you can see
     how it would have worked if everything went right.
+[5 Why's](https://github.com/The-Cherry-Man/SoftwareAssignment/tree/main/Documents)
