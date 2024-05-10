@@ -84,8 +84,8 @@
 
             //looks to see if the number and/or file input are filled at button press and
             //sends the corresponding data as needed
-            if(inputNumber == null && inputFile != null){
-              
+            if(inputNumber == null && inputFile != null && output != null && inputDelimiter != null){
+              alert("Success!");
               newRequest.open("POST", "http://localhost:50053", true);
               newRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
               newRequest.send(JSON.stringify({file: inputFile}));
@@ -102,8 +102,8 @@
            
               
             }
-            else if(inputNumber != null && inputFile == null){
-              
+            else if(inputNumber != null && inputFile == null && output != null && inputDelimiter != null){
+              alert("Success!");
               newRequest.open("POST", "http://localhost:50053", true);
               newRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
               newRequest.send(JSON.stringify({number: inputNumber}));
@@ -123,8 +123,8 @@
               alert("Only one input is allowed, enter number either by text box or file.")
               return;
             }
-            else {
-              alert("Must have at least one number input selected, either by text box or file.")
+            else if(output == null || inputDelimiter == null) {
+              alert("Must have at least one number input selected, either by text box or file. Delimiter and output must be chosen as well");
               return;
             }
             
