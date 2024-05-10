@@ -13,31 +13,28 @@ import java.util.concurrent.Callable;
 
 public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
 
-        private DataStorageComputeAPI2 api2;
+    private DataStorageComputeAPI2 api2;
 
-        private ComputeConceptualBoundaryAPI api3;
+    private ComputeConceptualBoundaryAPI api3;
 
-        Map<ConfigKey,Delimeter> delmeterMap =  new HashMap<>();
+    Map<ConfigKey,Delimeter> delmeterMap =  new HashMap<>();
 
-        Map<ConfigKey,Destinations> destinationMap =  new HashMap<>();
+    Map<ConfigKey,Destinations> destinationMap =  new HashMap<>();
 
-        Map<ConfigKey,UserNumber> usernumberMap =  new HashMap<>();
+    Map<ConfigKey,UserNumber> usernumberMap =  new HashMap<>();
 
-        ConfigKeyCollection collection = new ConfigKeyCollection();
+    ConfigKeyCollection collection = new ConfigKeyCollection();
 
-        ExecutorService executor = Executors.newFixedThreadPool(7);
+    ExecutorService executor = Executors.newFixedThreadPool(7);
 
-        public UserNetworkBoundaryAPI(DataStorageComputeAPI2 api2, ComputeConceptualBoundaryAPI api3) {
+    public UserNetworkBoundaryAPI(DataStorageComputeAPI2 api2, ComputeConceptualBoundaryAPI api3) {
 
-            this.api2 = api2;
+        this.api2 = api2;
 
-            this.api3 = api3;
-
-         }
-
-    public UserNetworkBoundaryAPI() {
+        this.api3 = api3;
 
     }
+
 
     @Override
     public ConfigKey userNumberInput(UserNumber usernumber) {
@@ -114,7 +111,7 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
         List<Integer> read = api2.read(o);
 
         List<Future<BigInteger>> futures = new ArrayList<>();
-    
+
 
         for (int i = 0; i < read.size(); ++i) {
 
@@ -133,17 +130,17 @@ public class UserNetworkBoundaryAPI implements UserComputeAPI1 {
             futures.add(submit);
         }
 
-    for (int i = 0; i < futures.size(); ++i) {
+        for (int i = 0; i < futures.size(); ++i) {
 
 
-        BigInteger bigInteger = futures.get(i).get();
+            BigInteger bigInteger = futures.get(i).get();
 
-        api2.write(bigInteger, delimeter, destination);
+            api2.write(bigInteger, delimeter, destination);
 
-    }
-      
+        }
 
-  
+
+
 
         return r;
     }

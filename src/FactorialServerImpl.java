@@ -7,9 +7,9 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
 
   private final UserNetworkBoundaryAPI unbapi;
 
-  public  FactorialServerImpl() {
+  public  FactorialServerImpl(UserNetworkBoundaryAPI unba) {
 
-     unbapi = new UserNetworkBoundaryAPI();
+    unbapi = unba;
 
   }
 
@@ -89,7 +89,7 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
 
     }
 
-     responseObserver.onNext(configKey);
+    responseObserver.onNext(configKey);
     responseObserver.onCompleted();
 
   }
@@ -130,7 +130,7 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
   @Override
   public void compute(API1.ConfigKeyCollection request, io.grpc.stub.StreamObserver<API1.Result> responseObserver) {
 
-   // io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getComputeMethod(), responseObserver);
+    // io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getComputeMethod(), responseObserver);
 
     API1.Result result = null;
 
@@ -140,15 +140,20 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
 
     try {
 
-      for(int i = 0; i <= request.getListOfKeysList().size() ; ++i){
+      for(int i = 0; i < request.getListOfKeysList().size() ; ++i){
 
-        c.addKey(new ConfigKey(request.getListOfKeys(i).getConfigKey()));
+        c.addKey(new ConfigKey(request.getListOfKeys(i).getKey()));
 
       }
 
       Result compute = unbapi.compute(c);
 
-      result = API1.Result.newBuilder().setErrorMessage(compute.getErrorMessageResult()).build();
+      API1.Result.Builder builder = API1.Result.newBuilder();
+
+      if(compute.getErrorMessageResult() != null){
+        builder.setErrorMessage(compute.getErrorMessageResult());
+      }
+      result = builder.build();
 
     }catch (Exception e){
 
@@ -156,7 +161,7 @@ public class FactorialServerImpl extends UserNetworkBoundaryServiceGrpc.UserNetw
 
     }
 
-     responseObserver.onNext(result);
+    responseObserver.onNext(result);
     responseObserver.onCompleted();
   }
 
