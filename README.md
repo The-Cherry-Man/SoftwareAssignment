@@ -11,6 +11,10 @@ Our Computation Description:
 
     Takes the factorial of a number and mutiples the digits of the answer.
 
+To Run:
+
+    Run DatastoreServer.java and FactorialServer.java and then after that, run the Client.java file and input your data
+
 User Input Example:
 
     500 ; output.txt
@@ -26,8 +30,7 @@ Computation Example:
 
 API Diagram:
 
-![Diagram2](https://github.com/The-Cherry-Man/SoftwareAssignment/assets/157428885/e7e27f10-4c2e-4480-b985-ae3c3889b7d8)
-
+![Screenshot 2024-05-10 132121](https://github.com/The-Cherry-Man/SoftwareAssignment/assets/157428885/ffb50e8a-6ee7-4e72-81c3-8d8dbbea0a2d)
 
 Thread information:
 
